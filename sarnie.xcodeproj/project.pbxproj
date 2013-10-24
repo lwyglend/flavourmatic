@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10E7A2F651304A66A522FEE0 /* libPods-sarnie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A53C08A2A14657AD63BF01 /* libPods-sarnie.a */; };
+		493C48B017B51F8600D2447F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48AF17B51F8600D2447F /* UIKit.framework */; };
+		493C48B217B51F8600D2447F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48B117B51F8600D2447F /* Foundation.framework */; };
+		493C48B417B51F8600D2447F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48B317B51F8600D2447F /* CoreGraphics.framework */; };
+		493C48BA17B51F8600D2447F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493C48B817B51F8600D2447F /* InfoPlist.strings */; };
+		493C48BC17B51F8600D2447F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 493C48BB17B51F8600D2447F /* main.m */; };
+		493C48C017B51F8600D2447F /* LWSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 493C48BF17B51F8600D2447F /* LWSAppDelegate.m */; };
+		493C48C217B51F8600D2447F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 493C48C117B51F8600D2447F /* Default.png */; };
+		493C48C417B51F8600D2447F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493C48C317B51F8600D2447F /* Default@2x.png */; };
+		493C48C617B51F8600D2447F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493C48C517B51F8600D2447F /* Default-568h@2x.png */; };
+		493C48CE17B51F8600D2447F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48CD17B51F8600D2447F /* SenTestingKit.framework */; };
+		493C48CF17B51F8600D2447F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48AF17B51F8600D2447F /* UIKit.framework */; };
+		493C48D017B51F8600D2447F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48B117B51F8600D2447F /* Foundation.framework */; };
+		493C48D817B51F8600D2447F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493C48D617B51F8600D2447F /* InfoPlist.strings */; };
+		493C48DB17B51F8600D2447F /* LWSFlavourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 493C48DA17B51F8600D2447F /* LWSFlavourTests.m */; };
+		49B4916E17E10EC900D84AB2 /* LWSFlavourWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4916D17E10EC900D84AB2 /* LWSFlavourWheel.m */; };
+		49B491721802DEC800D84AB2 /* LWSFlavourMatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B491711802DEC800D84AB2 /* LWSFlavourMatchTests.m */; };
+		49B4917518044D4F00D84AB2 /* LWSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4917418044D4F00D84AB2 /* LWSHomeViewController.m */; };
+		49B4917818044D7600D84AB2 /* LWSHomeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4917718044D7600D84AB2 /* LWSHomeDataSource.m */; };
+		49B4917B18044D8000D84AB2 /* LWSHomeDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4917A18044D8000D84AB2 /* LWSHomeDelegate.m */; };
+		49B4917F18044E0A00D84AB2 /* LWSHomeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4917E18044E0A00D84AB2 /* LWSHomeViewControllerTests.m */; };
+		49B49183180450B400D84AB2 /* LWSHomeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B49182180450B400D84AB2 /* LWSHomeViewTests.m */; };
+		49B491861804551800D84AB2 /* LWSHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B491851804551800D84AB2 /* LWSHomeView.m */; };
+		49B4918A1804561A00D84AB2 /* LWSViewTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B491891804561A00D84AB2 /* LWSViewTester.m */; };
+		F4DA218DE0EE44E9B9E9C82F /* libPods-sarnieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE396CCECA6492EB580D8CF /* libPods-sarnieTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		493C48D117B51F8600D2447F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 493C48A417B51F8600D2447F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 493C48AB17B51F8600D2447F;
+			remoteInfo = sarnie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		36EE07D095CB491DAAC6F16C /* Pods-sarnieTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sarnieTests.xcconfig"; path = "Pods/Pods-sarnieTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		493C48AC17B51F8600D2447F /* sarnie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sarnie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		493C48AF17B51F8600D2447F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		493C48B117B51F8600D2447F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		493C48B317B51F8600D2447F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		493C48B717B51F8600D2447F /* sarnie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sarnie-Info.plist"; sourceTree = "<group>"; };
+		493C48B917B51F8600D2447F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		493C48BB17B51F8600D2447F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		493C48BD17B51F8600D2447F /* sarnie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sarnie-Prefix.pch"; sourceTree = "<group>"; };
+		493C48BE17B51F8600D2447F /* LWSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWSAppDelegate.h; sourceTree = "<group>"; };
+		493C48BF17B51F8600D2447F /* LWSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWSAppDelegate.m; sourceTree = "<group>"; };
+		493C48C117B51F8600D2447F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		493C48C317B51F8600D2447F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		493C48C517B51F8600D2447F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		493C48CC17B51F8600D2447F /* sarnieTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sarnieTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		493C48CD17B51F8600D2447F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		493C48D517B51F8600D2447F /* sarnieTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sarnieTests-Info.plist"; sourceTree = "<group>"; };
+		493C48D717B51F8600D2447F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		493C48D917B51F8600D2447F /* LWSFlavourTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWSFlavourTests.h; sourceTree = "<group>"; };
+		493C48DA17B51F8600D2447F /* LWSFlavourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourTests.m; sourceTree = "<group>"; };
+		49B4916C17E10EC900D84AB2 /* LWSFlavourWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSFlavourWheel.h; sourceTree = "<group>"; };
+		49B4916D17E10EC900D84AB2 /* LWSFlavourWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourWheel.m; sourceTree = "<group>"; };
+		49B491701802DEC800D84AB2 /* LWSFlavourMatchTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSFlavourMatchTests.h; sourceTree = "<group>"; };
+		49B491711802DEC800D84AB2 /* LWSFlavourMatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourMatchTests.m; sourceTree = "<group>"; };
+		49B4917318044D4F00D84AB2 /* LWSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeViewController.h; sourceTree = "<group>"; };
+		49B4917418044D4F00D84AB2 /* LWSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeViewController.m; sourceTree = "<group>"; };
+		49B4917618044D7600D84AB2 /* LWSHomeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeDataSource.h; sourceTree = "<group>"; };
+		49B4917718044D7600D84AB2 /* LWSHomeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeDataSource.m; sourceTree = "<group>"; };
+		49B4917918044D8000D84AB2 /* LWSHomeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeDelegate.h; sourceTree = "<group>"; };
+		49B4917A18044D8000D84AB2 /* LWSHomeDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeDelegate.m; sourceTree = "<group>"; };
+		49B4917D18044E0A00D84AB2 /* LWSHomeViewControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeViewControllerTests.h; sourceTree = "<group>"; };
+		49B4917E18044E0A00D84AB2 /* LWSHomeViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeViewControllerTests.m; sourceTree = "<group>"; };
+		49B49181180450B400D84AB2 /* LWSHomeViewTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeViewTests.h; sourceTree = "<group>"; };
+		49B49182180450B400D84AB2 /* LWSHomeViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeViewTests.m; sourceTree = "<group>"; };
+		49B491841804551800D84AB2 /* LWSHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeView.h; sourceTree = "<group>"; };
+		49B491851804551800D84AB2 /* LWSHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeView.m; sourceTree = "<group>"; };
+		49B491881804561A00D84AB2 /* LWSViewTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSViewTester.h; sourceTree = "<group>"; };
+		49B491891804561A00D84AB2 /* LWSViewTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSViewTester.m; sourceTree = "<group>"; };
+		5AE396CCECA6492EB580D8CF /* libPods-sarnieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sarnieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		783BC3208A1A4C0897496BE0 /* Pods-sarnie.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sarnie.xcconfig"; path = "Pods/Pods-sarnie.xcconfig"; sourceTree = SOURCE_ROOT; };
+		D8A53C08A2A14657AD63BF01 /* libPods-sarnie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sarnie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		493C48A917B51F8600D2447F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493C48B017B51F8600D2447F /* UIKit.framework in Frameworks */,
+				493C48B217B51F8600D2447F /* Foundation.framework in Frameworks */,
+				493C48B417B51F8600D2447F /* CoreGraphics.framework in Frameworks */,
+				10E7A2F651304A66A522FEE0 /* libPods-sarnie.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493C48C817B51F8600D2447F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493C48CE17B51F8600D2447F /* SenTestingKit.framework in Frameworks */,
+				493C48CF17B51F8600D2447F /* UIKit.framework in Frameworks */,
+				493C48D017B51F8600D2447F /* Foundation.framework in Frameworks */,
+				F4DA218DE0EE44E9B9E9C82F /* libPods-sarnieTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		493C48A317B51F8600D2447F = {
+			isa = PBXGroup;
+			children = (
+				493C48B517B51F8600D2447F /* sarnie */,
+				493C48D317B51F8600D2447F /* sarnieTests */,
+				49B49187180455DA00D84AB2 /* testUtilities */,
+				493C48AE17B51F8600D2447F /* Frameworks */,
+				493C48AD17B51F8600D2447F /* Products */,
+				783BC3208A1A4C0897496BE0 /* Pods-sarnie.xcconfig */,
+				36EE07D095CB491DAAC6F16C /* Pods-sarnieTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		493C48AD17B51F8600D2447F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				493C48AC17B51F8600D2447F /* sarnie.app */,
+				493C48CC17B51F8600D2447F /* sarnieTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		493C48AE17B51F8600D2447F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				493C48AF17B51F8600D2447F /* UIKit.framework */,
+				493C48B117B51F8600D2447F /* Foundation.framework */,
+				493C48B317B51F8600D2447F /* CoreGraphics.framework */,
+				493C48CD17B51F8600D2447F /* SenTestingKit.framework */,
+				D8A53C08A2A14657AD63BF01 /* libPods-sarnie.a */,
+				5AE396CCECA6492EB580D8CF /* libPods-sarnieTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		493C48B517B51F8600D2447F /* sarnie */ = {
+			isa = PBXGroup;
+			children = (
+				493C48E717B5313B00D2447F /* Application */,
+				493C48E617B5306300D2447F /* Controllers */,
+				493C48E517B5305C00D2447F /* Views */,
+				493C48E417B5305500D2447F /* Model */,
+				493C48B617B51F8600D2447F /* Supporting Files */,
+			);
+			path = sarnie;
+			sourceTree = "<group>";
+		};
+		493C48B617B51F8600D2447F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				493C48B717B51F8600D2447F /* sarnie-Info.plist */,
+				493C48B817B51F8600D2447F /* InfoPlist.strings */,
+				493C48BB17B51F8600D2447F /* main.m */,
+				493C48BD17B51F8600D2447F /* sarnie-Prefix.pch */,
+				493C48C117B51F8600D2447F /* Default.png */,
+				493C48C317B51F8600D2447F /* Default@2x.png */,
+				493C48C517B51F8600D2447F /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		493C48D317B51F8600D2447F /* sarnieTests */ = {
+			isa = PBXGroup;
+			children = (
+				49B49180180450A100D84AB2 /* ViewTests */,
+				49B4917C18044DDF00D84AB2 /* ControllerTests */,
+				49B4916F1802DC5A00D84AB2 /* ModelTests */,
+				493C48D417B51F8600D2447F /* Supporting Files */,
+			);
+			path = sarnieTests;
+			sourceTree = "<group>";
+		};
+		493C48D417B51F8600D2447F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				493C48D517B51F8600D2447F /* sarnieTests-Info.plist */,
+				493C48D617B51F8600D2447F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		493C48E417B5305500D2447F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49B4916C17E10EC900D84AB2 /* LWSFlavourWheel.h */,
+				49B4916D17E10EC900D84AB2 /* LWSFlavourWheel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		493C48E517B5305C00D2447F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49B491841804551800D84AB2 /* LWSHomeView.h */,
+				49B491851804551800D84AB2 /* LWSHomeView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		493C48E617B5306300D2447F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49B4917318044D4F00D84AB2 /* LWSHomeViewController.h */,
+				49B4917418044D4F00D84AB2 /* LWSHomeViewController.m */,
+				49B4917618044D7600D84AB2 /* LWSHomeDataSource.h */,
+				49B4917718044D7600D84AB2 /* LWSHomeDataSource.m */,
+				49B4917918044D8000D84AB2 /* LWSHomeDelegate.h */,
+				49B4917A18044D8000D84AB2 /* LWSHomeDelegate.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		493C48E717B5313B00D2447F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				493C48BF17B51F8600D2447F /* LWSAppDelegate.m */,
+				493C48BE17B51F8600D2447F /* LWSAppDelegate.h */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		49B4916F1802DC5A00D84AB2 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				493C48D917B51F8600D2447F /* LWSFlavourTests.h */,
+				493C48DA17B51F8600D2447F /* LWSFlavourTests.m */,
+				49B491701802DEC800D84AB2 /* LWSFlavourMatchTests.h */,
+				49B491711802DEC800D84AB2 /* LWSFlavourMatchTests.m */,
+			);
+			name = ModelTests;
+			sourceTree = "<group>";
+		};
+		49B4917C18044DDF00D84AB2 /* ControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				49B4917D18044E0A00D84AB2 /* LWSHomeViewControllerTests.h */,
+				49B4917E18044E0A00D84AB2 /* LWSHomeViewControllerTests.m */,
+			);
+			name = ControllerTests;
+			sourceTree = "<group>";
+		};
+		49B49180180450A100D84AB2 /* ViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				49B49181180450B400D84AB2 /* LWSHomeViewTests.h */,
+				49B49182180450B400D84AB2 /* LWSHomeViewTests.m */,
+			);
+			name = ViewTests;
+			sourceTree = "<group>";
+		};
+		49B49187180455DA00D84AB2 /* testUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				49B491881804561A00D84AB2 /* LWSViewTester.h */,
+				49B491891804561A00D84AB2 /* LWSViewTester.m */,
+			);
+			name = testUtilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		493C48AB17B51F8600D2447F /* sarnie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 493C48DE17B51F8600D2447F /* Build configuration list for PBXNativeTarget "sarnie" */;
+			buildPhases = (
+				25803438827F483A9F98EDDB /* Check Pods Manifest.lock */,
+				493C48A817B51F8600D2447F /* Sources */,
+				493C48A917B51F8600D2447F /* Frameworks */,
+				493C48AA17B51F8600D2447F /* Resources */,
+				733C7CAF6926479193A07CB5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sarnie;
+			productName = sarnie;
+			productReference = 493C48AC17B51F8600D2447F /* sarnie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		493C48CB17B51F8600D2447F /* sarnieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 493C48E117B51F8600D2447F /* Build configuration list for PBXNativeTarget "sarnieTests" */;
+			buildPhases = (
+				EFED3FC8B5D7487380DCD6B4 /* Check Pods Manifest.lock */,
+				493C48C717B51F8600D2447F /* Sources */,
+				493C48C817B51F8600D2447F /* Frameworks */,
+				493C48C917B51F8600D2447F /* Resources */,
+				493C48CA17B51F8600D2447F /* ShellScript */,
+				82FC5AFA6A2347C49220B21D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				493C48D217B51F8600D2447F /* PBXTargetDependency */,
+			);
+			name = sarnieTests;
+			productName = sarnieTests;
+			productReference = 493C48CC17B51F8600D2447F /* sarnieTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		493C48A417B51F8600D2447F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LWS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Laura Wyglendacz";
+			};
+			buildConfigurationList = 493C48A717B51F8600D2447F /* Build configuration list for PBXProject "sarnie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 493C48A317B51F8600D2447F;
+			productRefGroup = 493C48AD17B51F8600D2447F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				493C48AB17B51F8600D2447F /* sarnie */,
+				493C48CB17B51F8600D2447F /* sarnieTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		493C48AA17B51F8600D2447F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493C48BA17B51F8600D2447F /* InfoPlist.strings in Resources */,
+				493C48C217B51F8600D2447F /* Default.png in Resources */,
+				493C48C417B51F8600D2447F /* Default@2x.png in Resources */,
+				493C48C617B51F8600D2447F /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493C48C917B51F8600D2447F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493C48D817B51F8600D2447F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25803438827F483A9F98EDDB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"Pods/../Podfile.lock\" \"Pods/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		493C48CA17B51F8600D2447F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		733C7CAF6926479193A07CB5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-sarnie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82FC5AFA6A2347C49220B21D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-sarnieTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFED3FC8B5D7487380DCD6B4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		493C48A817B51F8600D2447F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493C48BC17B51F8600D2447F /* main.m in Sources */,
+				493C48C017B51F8600D2447F /* LWSAppDelegate.m in Sources */,
+				49B4916E17E10EC900D84AB2 /* LWSFlavourWheel.m in Sources */,
+				49B4917518044D4F00D84AB2 /* LWSHomeViewController.m in Sources */,
+				49B4917818044D7600D84AB2 /* LWSHomeDataSource.m in Sources */,
+				49B4917B18044D8000D84AB2 /* LWSHomeDelegate.m in Sources */,
+				49B491861804551800D84AB2 /* LWSHomeView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493C48C717B51F8600D2447F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493C48DB17B51F8600D2447F /* LWSFlavourTests.m in Sources */,
+				49B491721802DEC800D84AB2 /* LWSFlavourMatchTests.m in Sources */,
+				49B4917F18044E0A00D84AB2 /* LWSHomeViewControllerTests.m in Sources */,
+				49B49183180450B400D84AB2 /* LWSHomeViewTests.m in Sources */,
+				49B4918A1804561A00D84AB2 /* LWSViewTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		493C48D217B51F8600D2447F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 493C48AB17B51F8600D2447F /* sarnie */;
+			targetProxy = 493C48D117B51F8600D2447F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		493C48B817B51F8600D2447F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				493C48B917B51F8600D2447F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		493C48D617B51F8600D2447F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				493C48D717B51F8600D2447F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		493C48DC17B51F8600D2447F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		493C48DD17B51F8600D2447F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		493C48DF17B51F8600D2447F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 783BC3208A1A4C0897496BE0 /* Pods-sarnie.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sarnie/sarnie-Prefix.pch";
+				INFOPLIST_FILE = "sarnie/sarnie-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		493C48E017B51F8600D2447F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 783BC3208A1A4C0897496BE0 /* Pods-sarnie.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sarnie/sarnie-Prefix.pch";
+				INFOPLIST_FILE = "sarnie/sarnie-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		493C48E217B51F8600D2447F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36EE07D095CB491DAAC6F16C /* Pods-sarnieTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sarnie.app/sarnie";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Laura Wyglendacz (ANC7B5R8KW)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sarnie/sarnie-Prefix.pch";
+				INFOPLIST_FILE = "sarnieTests/sarnieTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		493C48E317B51F8600D2447F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36EE07D095CB491DAAC6F16C /* Pods-sarnieTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sarnie.app/sarnie";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Laura Wyglendacz (ANC7B5R8KW)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sarnie/sarnie-Prefix.pch";
+				INFOPLIST_FILE = "sarnieTests/sarnieTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		493C48A717B51F8600D2447F /* Build configuration list for PBXProject "sarnie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493C48DC17B51F8600D2447F /* Debug */,
+				493C48DD17B51F8600D2447F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		493C48DE17B51F8600D2447F /* Build configuration list for PBXNativeTarget "sarnie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493C48DF17B51F8600D2447F /* Debug */,
+				493C48E017B51F8600D2447F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		493C48E117B51F8600D2447F /* Build configuration list for PBXNativeTarget "sarnieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493C48E217B51F8600D2447F /* Debug */,
+				493C48E317B51F8600D2447F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 493C48A417B51F8600D2447F /* Project object */;
+}

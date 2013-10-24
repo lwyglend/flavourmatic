@@ -1,0 +1,16 @@
+PODS:
+  - OCHamcrest (3.0.0)
+  - OCMock (2.2.1)
+  - Reveal-iOS-SDK (0.9.1)
+
+DEPENDENCIES:
+  - OCHamcrest
+  - OCMock
+  - Reveal-iOS-SDK
+
+SPEC CHECKSUMS:
+  OCHamcrest: 739added27df87b26adb60ab5aa14b7e3cf58afe
+  OCMock: 80e4cfbc71a0e1bd28caf10a9fda27da7c4c8402
+  Reveal-iOS-SDK: 7396a20e743807b1e6f1caae664e1a9dc0cc442c
+
+COCOAPODS: 0.22.3
