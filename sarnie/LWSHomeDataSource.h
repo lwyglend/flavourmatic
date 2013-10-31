@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LWSHomeDataSource : NSObject
+@interface LWSHomeDataSource : NSObject <UIPickerViewDataSource>
 
 @end

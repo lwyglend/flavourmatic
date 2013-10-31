@@ -22,7 +22,7 @@
 
 -(void)setUp
 {
-    _homeView = [LWSHomeView homeView];
+    _homeView = [LWSHomeView homeViewWithDataSource:[[LWSHomeDataSource alloc] init] andDelegate:[[LWSHomeDelegate alloc]init] ];
 }
 
 -(void)testThatHomeViewIsCreated
@@ -30,17 +30,31 @@
     assertThat(self.homeView, isNot(NULL));
 }
 
--(void)testFindFlavourMatchesButtonIsDisplayedWithCorrectText
+-(void)testFlavourPickerIsDisplayed
 {
     //given
-    NSString *expectedFindFlavourMatchesButtonText = @"Find matching flavours!";
+    NSString *expectedFlavourPickerAccessibilityText = @"Flavour Picker";
     NSArray *subviews = self.homeView.subviews;
     
     //when
     
     //then
-    UIView *button = [LWSViewTester findFirstUIViewIn:subviews withAccessibilityLabelText:expectedFindFlavourMatchesButtonText];
+    UIView *picker = [LWSViewTester findFirstUIViewIn:subviews withAccessibilityLabelText:expectedFlavourPickerAccessibilityText];
+    [LWSViewTester assertThatFrameOriginAndSizeIsNonZero:picker];
+}
+
+-(void)testFindFlavourMatchesButtonIsDisplayedWithCorrectText
+{
+    //given
+    NSString *expectedFindFlavourMatchesButtonAccessibilityText = @"Find matching flavours!";
+    NSArray *subviews = self.homeView.subviews;
+    
+    //when
+    
+    //then
+    UIView *button = [LWSViewTester findFirstUIViewIn:subviews withAccessibilityLabelText:expectedFindFlavourMatchesButtonAccessibilityText];
     [LWSViewTester assertThatFrameOriginAndSizeIsNonZero:button];
 }
 
 @end
+

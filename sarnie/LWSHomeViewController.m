@@ -20,7 +20,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    _homeView = [LWSHomeView homeView];
+    _homeView = [LWSHomeView homeViewWithDataSource:[[LWSHomeDataSource alloc]init] andDelegate:[[LWSHomeDelegate alloc]init] ];
     self.view = _homeView;
 }
 

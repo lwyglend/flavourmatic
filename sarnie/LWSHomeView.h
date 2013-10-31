@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LWSHomeDataSource.h"
+#import "LWSHomeDelegate.h"
 
 @interface LWSHomeView : UIView
 
-+(instancetype)homeView;
++(instancetype)homeViewWithDataSource:(LWSHomeDataSource *)dataSource andDelegate:(LWSHomeDelegate *)delegate;
 
 @end

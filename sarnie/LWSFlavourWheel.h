@@ -13,6 +13,8 @@
 @property (nonatomic) NSDictionary *flavours;
 @property (nonatomic) NSDictionary *flavourMatches;
 
++(LWSFlavourWheel *)sharedFlavourWheel;
 -(BOOL) flavour:(NSString*)someFlavour matches:(NSString*)anotherFlavour;
+-(NSInteger)numberOfFlavours;
 
 @end

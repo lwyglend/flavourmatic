@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LWSHomeDelegate : NSObject
+@interface LWSHomeDelegate : NSObject <UIPickerViewDelegate>
 
 @end

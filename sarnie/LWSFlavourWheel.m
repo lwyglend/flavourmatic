@@ -8,10 +8,12 @@
 
 #import "LWSFlavourWheel.h"
 
-@interface LWSFlavourWheel()
-@end
-
 @implementation LWSFlavourWheel
+
+-(NSInteger)numberOfFlavours
+{
+    return [[LWSFlavourWheel sharedFlavourWheel].flavours count];
+}
 
 -(BOOL)flavour:(NSString*)someFlavour matches:(NSString*)anotherFlavour
 {
@@ -21,32 +23,6 @@
         return YES;
     }
     return NO;
-}
-
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        _flavours = [self populateFlavours];
-        _flavourMatches = [self populateFlavourMatches];
-    }
-    return self;
-}
-
--(NSDictionary *)populateFlavourMatches
-{
-    NSArray *coffeeFlavourMatches = @[@"Chocolate"];
-    NSArray *chocolateFlavourMatches = @[@"Coffee"];
-    
-    NSString *coffee = @"Coffee";
-    NSString *chocolate = @"Chocolate";
-    
-    NSArray *flavourMatches = @[coffeeFlavourMatches,
-                                chocolateFlavourMatches];
-    
-    NSArray *flavours = @[coffee, chocolate];
-    
-    return [NSDictionary dictionaryWithObjects:flavourMatches forKeys:flavours];
 }
 
 -(NSDictionary *)populateFlavours
@@ -121,6 +97,42 @@
                                brineAndSaltFlavourGroup ];
     
     return [NSDictionary dictionaryWithObjects:flavoursByGroup forKeys:flavourGroups];
+}
+
+-(NSDictionary *)populateFlavourMatches
+{
+    NSArray *coffeeFlavourMatches = @[@"Chocolate"];
+    NSArray *chocolateFlavourMatches = @[@"Coffee"];
+    
+    NSString *coffee = @"Coffee";
+    NSString *chocolate = @"Chocolate";
+    
+    NSArray *flavourMatches = @[coffeeFlavourMatches,
+                                chocolateFlavourMatches];
+    
+    NSArray *flavours = @[coffee, chocolate];
+    
+    return [NSDictionary dictionaryWithObjects:flavourMatches forKeys:flavours];
+}
+
++(LWSFlavourWheel *)sharedFlavourWheel
+{
+    static LWSFlavourWheel *sharedFlavourWheel = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedFlavourWheel = [[LWSFlavourWheel alloc] init];
+    });
+    return sharedFlavourWheel;
+}
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _flavours = [self populateFlavours];
+        _flavourMatches = [self populateFlavourMatches];
+    }
+    return self;
 }
 
 @end
