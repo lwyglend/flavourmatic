@@ -8,6 +8,8 @@
 
 #import "LWSAppDelegate.h"
 #import "LWSHomeViewController.h"
+#import "LWSHomeDataSource.h"
+#import "LWSHomeDelegate.h"
 
 @implementation LWSAppDelegate
 
@@ -18,7 +20,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     //Set root view controller, one shown on app launch
-    LWSHomeViewController *homeViewController =[[LWSHomeViewController alloc] init];
+    LWSFlavourWheel *flavourWheel = [[LWSFlavourWheel alloc] init];
+    LWSHomeDataSource *homeDataSource =[LWSHomeDataSource homeDataSourceWithFlavourWheel:flavourWheel];
+    LWSHomeDelegate *homeDelegate = [[LWSHomeDelegate alloc]init];
+    LWSHomeViewController *homeViewController = [LWSHomeViewController homeViewControllerWith:homeDataSource andDelegate:homeDelegate];
     
     self.window.rootViewController = homeViewController;
     

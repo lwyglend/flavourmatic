@@ -7,7 +7,12 @@
 //
 
 #import "LWSHomeDataSource.h"
-#import "LWSFlavourWheel.h"
+
+@interface LWSHomeDataSource ()
+
+@property LWSFlavourWheel *flavourWheel;
+
+@end
 
 @implementation LWSHomeDataSource
 
@@ -19,9 +24,19 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return [[LWSFlavourWheel sharedFlavourWheel] numberOfFlavours];
+    return [self.flavourWheel numberOfFlavours];
 }
 
+-(id)initWithFlavourWheel:(LWSFlavourWheel*)flavourWheel
+{
+    self = [super init];
+    _flavourWheel = flavourWheel;
+    return self;
+}
 
++(instancetype)homeDataSourceWithFlavourWheel:(LWSFlavourWheel *)flavourWheel
+{
+    return [[LWSHomeDataSource alloc] initWithFlavourWheel:flavourWheel];
+}
 
 @end

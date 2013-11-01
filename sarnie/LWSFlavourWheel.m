@@ -12,7 +12,7 @@
 
 -(NSInteger)numberOfFlavours
 {
-    return [[LWSFlavourWheel sharedFlavourWheel].flavours count];
+    return [self.flavours count];
 }
 
 -(BOOL)flavour:(NSString*)someFlavour matches:(NSString*)anotherFlavour

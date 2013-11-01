@@ -12,6 +12,8 @@
 @interface LWSHomeViewController ()
 
 @property(nonatomic,readonly) UIView *homeView;
+@property (nonatomic, readonly) LWSHomeDelegate* homeDelegate;
+@property (nonatomic, readonly) LWSHomeDataSource* homeDataSource;
 
 @end
 
@@ -20,8 +22,22 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    _homeView = [LWSHomeView homeViewWithDataSource:[[LWSHomeDataSource alloc]init] andDelegate:[[LWSHomeDelegate alloc]init] ];
+    _homeView = [LWSHomeView homeViewWithDataSource:self.homeDataSource andDelegate:self.homeDelegate];
     self.view = _homeView;
+}
+
+-(id)initWithDataSource:(LWSHomeDataSource*)dataSource andDelegate:(LWSHomeDelegate*)delegate
+{
+    self = [super init];
+    _homeDataSource = dataSource;
+    _homeDelegate = delegate;
+    return self;
+}
+
++(instancetype)homeViewControllerWith:(LWSHomeDataSource*) dataSource andDelegate:(LWSHomeDelegate*)delegate
+
+{
+    return [[LWSHomeViewController alloc] initWithDataSource:dataSource andDelegate:delegate];
 }
 
 @end

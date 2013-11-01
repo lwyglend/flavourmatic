@@ -64,6 +64,8 @@
 -(id)initWithDataSource:(LWSHomeDataSource *)dataSource andDelegate:(LWSHomeDelegate *)delegate
 {
     self = [super init];
+    _homeViewDataSource = dataSource;
+    _homeViewDelegate = delegate;
     [self setupSubviews];
     return self;
 }

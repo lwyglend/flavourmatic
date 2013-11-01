@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LWSHomeDelegate.h"
+#import "LWSHomeDataSource.h"
 
 @interface LWSHomeViewController : UIViewController
+
++(instancetype)homeViewControllerWith:(LWSHomeDataSource*) dataSource andDelegate:(LWSHomeDelegate*)delegate;
 
 @end

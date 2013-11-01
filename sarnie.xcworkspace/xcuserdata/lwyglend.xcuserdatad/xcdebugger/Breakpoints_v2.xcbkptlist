@@ -86,49 +86,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "sarnie/LWSFlavourWheel.m"
-            timestampString = "404408890.037883"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "-numberOfFlavours"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "sarnie/LWSHomeDataSource.m"
-            timestampString = "404930779.439299"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "-pickerView:numberOfRowsInComponent:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "sarnie/LWSHomeDataSource.m"
-            timestampString = "404932648.365311"
+            filePath = "sarnie/LWSHomeDataSource.h"
+            timestampString = "405009651.858926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "@implementation LWSHomeDataSource"
-            landmarkType = "3">
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "-initWithFlavourWheel:"
+            landmarkType = "4">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

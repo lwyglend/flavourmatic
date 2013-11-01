@@ -10,10 +10,9 @@
 
 @interface LWSFlavourWheel : NSObject
 
-@property (nonatomic) NSDictionary *flavours;
-@property (nonatomic) NSDictionary *flavourMatches;
+@property (nonatomic, readonly) NSDictionary *flavours;
+@property (nonatomic, readonly) NSDictionary *flavourMatches;
 
-+(LWSFlavourWheel *)sharedFlavourWheel;
 -(BOOL) flavour:(NSString*)someFlavour matches:(NSString*)anotherFlavour;
 -(NSInteger)numberOfFlavours;
 

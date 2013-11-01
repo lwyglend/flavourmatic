@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LWSFlavourWheel.h"
 
 @interface LWSHomeDataSource : NSObject <UIPickerViewDataSource>
+
++(instancetype)homeDataSourceWithFlavourWheel:(LWSFlavourWheel*)flavourWheel;
 
 @end
