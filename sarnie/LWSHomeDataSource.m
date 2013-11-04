@@ -18,12 +18,13 @@
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 1; //return 1 column, for the flavours (not groups yet)
-    //next step... return two columns, one for flavour, one for flavour group
+    return 1;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
+    if (component == 0) return [self.flavourWheel numberOfFlavours];
+    return [self.flavourWheel numberOfFlavourGroups];
 }
 
 -(id)initWithFlavourWheel:(LWSFlavourWheel*)flavourWheel

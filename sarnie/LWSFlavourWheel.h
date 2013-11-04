@@ -15,5 +15,6 @@
 
 -(BOOL) flavour:(NSString*)someFlavour matches:(NSString*)anotherFlavour;
 -(NSUInteger)numberOfFlavours;
+-(NSUInteger)numberOfFlavourGroups;
 
 @end

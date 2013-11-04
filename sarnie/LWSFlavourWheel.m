@@ -10,6 +10,11 @@
 
 @implementation LWSFlavourWheel
 
+-(NSUInteger)numberOfFlavourGroups
+{
+    return [[[self.flavours objectEnumerator] allObjects] count];
+}
+
 -(NSUInteger)numberOfFlavours
 {
     NSUInteger totalNumberOfFlavours = 0;
