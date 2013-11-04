@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LWSFlavourWheel.h"
 
 @interface LWSHomeDelegate : NSObject <UIPickerViewDelegate>
+
++(instancetype)homeDelegateWithFlavourWheel:(LWSFlavourWheel *)flavourWheel;
 
 @end

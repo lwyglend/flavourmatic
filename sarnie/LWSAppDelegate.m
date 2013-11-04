@@ -22,7 +22,7 @@
     //Set root view controller, one shown on app launch
     LWSFlavourWheel *flavourWheel = [[LWSFlavourWheel alloc] init];
     LWSHomeDataSource *homeDataSource =[LWSHomeDataSource homeDataSourceWithFlavourWheel:flavourWheel];
-    LWSHomeDelegate *homeDelegate = [[LWSHomeDelegate alloc]init];
+    LWSHomeDelegate *homeDelegate = [LWSHomeDelegate homeDelegateWithFlavourWheel:flavourWheel];
     LWSHomeViewController *homeViewController = [LWSHomeViewController homeViewControllerWith:homeDataSource andDelegate:homeDelegate];
     
     self.window.rootViewController = homeViewController;

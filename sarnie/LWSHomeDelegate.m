@@ -9,6 +9,12 @@
 #import "LWSHomeDelegate.h"
 #import "LWSFlavourWheel.h"
 
+@interface LWSHomeDelegate ()
+
+@property LWSFlavourWheel * flavourWheel;
+
+@end
+
 @implementation LWSHomeDelegate
 
 -(CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
@@ -23,7 +29,18 @@
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return @"BLAH!";
+    NSEnumerator *flavoursByGroupEnumerator = [self.flavourWheel.flavours objectEnumerator];
+    NSMutableArray *allFlavours = [NSMutableArray arrayWithCapacity:[self.flavourWheel numberOfFlavours]];
+    NSUInteger flavourCounter = 0;
+    NSUInteger withinFlavourGroupCounter;
+    
+    for( NSArray *flavoursByGroup in flavoursByGroupEnumerator ) {
+        for( withinFlavourGroupCounter = 0 ; withinFlavourGroupCounter < flavoursByGroup.count ; withinFlavourGroupCounter ++ ){
+            allFlavours[flavourCounter] = flavoursByGroup[withinFlavourGroupCounter];
+            flavourCounter ++;
+        }
+    }
+    return allFlavours[row];
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -31,4 +48,16 @@
     //handle action on selection
 }
 
-@end
+-(id)initWithFlavourWheel:(LWSFlavourWheel*)flavourWheel
+{
+    self = [super init];
+    _flavourWheel = flavourWheel;
+    return self;
+}
+
++(instancetype)homeDelegateWithFlavourWheel:(LWSFlavourWheel *)flavourWheel
+{
+    return [[LWSHomeDelegate alloc] initWithFlavourWheel:flavourWheel];
+}
+
+@ end

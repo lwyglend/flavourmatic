@@ -10,9 +10,14 @@
 
 @implementation LWSFlavourWheel
 
--(NSInteger)numberOfFlavours
+-(NSUInteger)numberOfFlavours
 {
-    return [self.flavours count];
+    NSUInteger totalNumberOfFlavours = 0;
+    NSEnumerator *flavoursByGroupEnumerator = [self.flavours objectEnumerator];
+    for(NSArray *flavoursByGroup in flavoursByGroupEnumerator) {
+        totalNumberOfFlavours += flavoursByGroup.count;
+    }
+    return totalNumberOfFlavours;
 }
 
 -(BOOL)flavour:(NSString*)someFlavour matches:(NSString*)anotherFlavour

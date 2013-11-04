@@ -14,6 +14,6 @@
 @property (nonatomic, readonly) NSDictionary *flavourMatches;
 
 -(BOOL) flavour:(NSString*)someFlavour matches:(NSString*)anotherFlavour;
--(NSInteger)numberOfFlavours;
+-(NSUInteger)numberOfFlavours;
 
 @end

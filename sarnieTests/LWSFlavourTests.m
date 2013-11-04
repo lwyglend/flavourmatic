@@ -112,4 +112,16 @@
     assertThat( self.flavourCollection.flavours, hasValue(brineAndSaltFlavoursByGroup) );
 }
 
+-(void)testThatCorrectNumberOfFlavoursReturnedByNumberOfFlavours
+{
+    //given
+    NSNumber *expectedNumberOfFlavours = @91;
+    
+    //when
+    NSNumber *result = [NSNumber numberWithUnsignedInteger:[self.flavourCollection numberOfFlavours]];
+    
+    //then
+    assertThat(result, is(expectedNumberOfFlavours));
+}
+
 @end

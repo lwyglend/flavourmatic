@@ -24,7 +24,6 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return [self.flavourWheel numberOfFlavours];
 }
 
 -(id)initWithFlavourWheel:(LWSFlavourWheel*)flavourWheel
