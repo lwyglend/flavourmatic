@@ -12,6 +12,8 @@
 
 @interface LWSHomeView : UIView
 
+@property (nonatomic,strong) UIButton *findFlavourMatchesButton;
+
 +(instancetype)homeViewWithDataSource:(LWSHomeDataSource *)dataSource andDelegate:(LWSHomeDelegate *)delegate;
 
 @end

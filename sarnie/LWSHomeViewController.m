@@ -11,7 +11,7 @@
 
 @interface LWSHomeViewController ()
 
-@property(nonatomic,readonly) UIView *homeView;
+@property(nonatomic,readonly) LWSHomeView *homeView;
 @property (nonatomic, readonly) LWSHomeDelegate* homeDelegate;
 @property (nonatomic, readonly) LWSHomeDataSource* homeDataSource;
 
@@ -23,7 +23,20 @@
 {
     [super viewDidLoad];
     _homeView = [LWSHomeView homeViewWithDataSource:self.homeDataSource andDelegate:self.homeDelegate];
+    [self setupFindFlavourMatchesButtonAction];
     self.view = _homeView;
+}
+
+-(void)setupFindFlavourMatchesButtonAction
+{
+    [self.homeView.findFlavourMatchesButton addTarget:self
+                                               action:@selector(findFlavourMatchesAction)
+                                     forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)findFlavourMatchesAction
+{
+    NSLog(@"BOOBS!");
 }
 
 -(id)initWithDataSource:(LWSHomeDataSource*)dataSource andDelegate:(LWSHomeDelegate*)delegate

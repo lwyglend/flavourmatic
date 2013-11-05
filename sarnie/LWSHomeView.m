@@ -10,7 +10,6 @@
 
 @interface LWSHomeView ()
 
-@property (nonatomic,strong) UIButton *findFlavourMatchesButton;
 @property (nonatomic,strong) UIPickerView *flavourPickerView;
 @property (nonatomic, strong) LWSHomeDataSource *homeViewDataSource;
 @property (nonatomic, strong) LWSHomeDelegate *homeViewDelegate;
@@ -44,7 +43,8 @@
     if(!_findFlavourMatchesButton) {
         CGRect buttonFrame = CGRectMake(60, 360, 200, 60);
         NSString *buttonText = @"Find matching flavours!";
-        _findFlavourMatchesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        _findFlavourMatchesButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        _findFlavourMatchesButton.userInteractionEnabled = YES;
         [_findFlavourMatchesButton setFrame:buttonFrame];
         [_findFlavourMatchesButton setTitle:buttonText forState:UIControlStateNormal] ;
         [_findFlavourMatchesButton setAccessibilityLabel:buttonText];
