@@ -8,6 +8,7 @@
 
 #import "LWSHomeView.h"
 #import "LWSHomeViewController.h"
+#import "LWSFlavourMatchesViewController.h"
 
 @interface LWSHomeViewController ()
 
@@ -36,7 +37,14 @@
 
 -(void)findFlavourMatchesAction
 {
-    NSLog(@"BOOBS!");
+    //Creat the view controller you want to present
+    LWSFlavourMatchesViewController *flavourMatchesViewController = [LWSFlavourMatchesViewController flavourMatchesViewController];
+    //Set the modalTransitionStyle property of the view controller to the desired value
+    [flavourMatchesViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    //Assign a delegate object to the view controller. Typically, the delegate is the presenting view contorller.
+    
+    //Call the presentViewController:animatedL:completion: method of the current view controller, passing in the view controller you want to present
+    [self presentViewController:flavourMatchesViewController animated:YES completion:nil];    
 }
 
 -(id)initWithDataSource:(LWSHomeDataSource*)dataSource andDelegate:(LWSHomeDelegate*)delegate
