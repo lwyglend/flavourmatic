@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LWSFlavourMatchesDataSource.h"
+#import "LWSFlavourMatchesDelegate.h"
 
 @interface LWSFlavourMatchesViewController : UITableViewController
 
-+(instancetype)flavourMatchesViewController;
++(instancetype)flavourMatchesViewControllerWithDataSource:(LWSFlavourMatchesDataSource *)dataSource andDelegate:(LWSFlavourMatchesDelegate *)delegate;
 
 @end

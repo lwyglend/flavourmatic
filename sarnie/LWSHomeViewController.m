@@ -13,8 +13,9 @@
 @interface LWSHomeViewController ()
 
 @property(nonatomic,readonly) LWSHomeView *homeView;
-@property (nonatomic, readonly) LWSHomeDelegate* homeDelegate;
-@property (nonatomic, readonly) LWSHomeDataSource* homeDataSource;
+@property (nonatomic, readonly) LWSHomeDelegate *homeDelegate;
+@property (nonatomic, readonly) LWSHomeDataSource *homeDataSource;
+@property (nonatomic, readonly) UIViewController *flavourMatchesViewController;
 
 @end
 
@@ -37,28 +38,29 @@
 
 -(void)findFlavourMatchesAction
 {
-    //Creat the view controller you want to present
-    LWSFlavourMatchesViewController *flavourMatchesViewController = [LWSFlavourMatchesViewController flavourMatchesViewController];
-    //Set the modalTransitionStyle property of the view controller to the desired value
-    [flavourMatchesViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    //Assign a delegate object to the view controller. Typically, the delegate is the presenting view contorller.
-    
-    //Call the presentViewController:animatedL:completion: method of the current view controller, passing in the view controller you want to present
-    [self presentViewController:flavourMatchesViewController animated:YES completion:nil];    
+    [self.flavourMatchesViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentViewController:self.flavourMatchesViewController animated:YES completion:nil];
 }
 
--(id)initWithDataSource:(LWSHomeDataSource*)dataSource andDelegate:(LWSHomeDelegate*)delegate
+-(id)initWithDataSource:(LWSHomeDataSource*)dataSource
+            andDelegate:(LWSHomeDelegate*)delegate
+andFlavourMatchesViewController:(UIViewController *)viewController
 {
     self = [super init];
     _homeDataSource = dataSource;
     _homeDelegate = delegate;
+    _flavourMatchesViewController = viewController;
     return self;
 }
 
-+(instancetype)homeViewControllerWith:(LWSHomeDataSource*) dataSource andDelegate:(LWSHomeDelegate*)delegate
++(instancetype)homeViewControllerWith:(LWSHomeDataSource*) dataSource
+                          andDelegate:(LWSHomeDelegate*)delegate
+           andFlavourMatchesViewController:(UIViewController *)viewController
 
 {
-    return [[LWSHomeViewController alloc] initWithDataSource:dataSource andDelegate:delegate];
+    return [[LWSHomeViewController alloc] initWithDataSource:dataSource
+                                                 andDelegate:delegate
+                                  andFlavourMatchesViewController:viewController];
 }
 
 @end

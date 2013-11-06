@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		10E7A2F651304A66A522FEE0 /* libPods-sarnie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A53C08A2A14657AD63BF01 /* libPods-sarnie.a */; };
 		491669E81829B2D8002B375A /* LWSFlavourMatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491669E71829B2D8002B375A /* LWSFlavourMatchesViewController.m */; };
+		491669ED182A8ED8002B375A /* LWSFlavourMatchesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 491669EC182A8ED8002B375A /* LWSFlavourMatchesView.m */; };
+		491669F0182A9311002B375A /* LWSFlavourMatchesDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 491669EF182A9311002B375A /* LWSFlavourMatchesDelegate.m */; };
+		491669F3182A932A002B375A /* LWSFlavourMatchesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 491669F2182A932A002B375A /* LWSFlavourMatchesDataSource.m */; };
 		493C48B017B51F8600D2447F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48AF17B51F8600D2447F /* UIKit.framework */; };
 		493C48B217B51F8600D2447F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48B117B51F8600D2447F /* Foundation.framework */; };
 		493C48B417B51F8600D2447F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48B317B51F8600D2447F /* CoreGraphics.framework */; };
@@ -49,6 +52,12 @@
 		36EE07D095CB491DAAC6F16C /* Pods-sarnieTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sarnieTests.xcconfig"; path = "Pods/Pods-sarnieTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		491669E61829B2D8002B375A /* LWSFlavourMatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSFlavourMatchesViewController.h; sourceTree = "<group>"; };
 		491669E71829B2D8002B375A /* LWSFlavourMatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourMatchesViewController.m; sourceTree = "<group>"; };
+		491669EB182A8ED8002B375A /* LWSFlavourMatchesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSFlavourMatchesView.h; sourceTree = "<group>"; };
+		491669EC182A8ED8002B375A /* LWSFlavourMatchesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourMatchesView.m; sourceTree = "<group>"; };
+		491669EE182A9311002B375A /* LWSFlavourMatchesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSFlavourMatchesDelegate.h; sourceTree = "<group>"; };
+		491669EF182A9311002B375A /* LWSFlavourMatchesDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourMatchesDelegate.m; sourceTree = "<group>"; };
+		491669F1182A932A002B375A /* LWSFlavourMatchesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSFlavourMatchesDataSource.h; sourceTree = "<group>"; };
+		491669F2182A932A002B375A /* LWSFlavourMatchesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourMatchesDataSource.m; sourceTree = "<group>"; };
 		493C48AC17B51F8600D2447F /* sarnie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sarnie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		493C48AF17B51F8600D2447F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		493C48B117B51F8600D2447F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -135,6 +144,28 @@
 			children = (
 				491669E61829B2D8002B375A /* LWSFlavourMatchesViewController.h */,
 				491669E71829B2D8002B375A /* LWSFlavourMatchesViewController.m */,
+				491669EE182A9311002B375A /* LWSFlavourMatchesDelegate.h */,
+				491669EF182A9311002B375A /* LWSFlavourMatchesDelegate.m */,
+				491669F1182A932A002B375A /* LWSFlavourMatchesDataSource.h */,
+				491669F2182A932A002B375A /* LWSFlavourMatchesDataSource.m */,
+			);
+			name = FlavourMatches;
+			sourceTree = "<group>";
+		};
+		491669E9182A8E9B002B375A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				49B491841804551800D84AB2 /* LWSHomeView.h */,
+				49B491851804551800D84AB2 /* LWSHomeView.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		491669EA182A8EB7002B375A /* FlavourMatches */ = {
+			isa = PBXGroup;
+			children = (
+				491669EB182A8ED8002B375A /* LWSFlavourMatchesView.h */,
+				491669EC182A8ED8002B375A /* LWSFlavourMatchesView.m */,
 			);
 			name = FlavourMatches;
 			sourceTree = "<group>";
@@ -232,8 +263,8 @@
 		493C48E517B5305C00D2447F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				49B491841804551800D84AB2 /* LWSHomeView.h */,
-				49B491851804551800D84AB2 /* LWSHomeView.m */,
+				491669EA182A8EB7002B375A /* FlavourMatches */,
+				491669E9182A8E9B002B375A /* Home */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -468,11 +499,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491669F3182A932A002B375A /* LWSFlavourMatchesDataSource.m in Sources */,
 				493C48BC17B51F8600D2447F /* main.m in Sources */,
+				491669F0182A9311002B375A /* LWSFlavourMatchesDelegate.m in Sources */,
 				493C48C017B51F8600D2447F /* LWSAppDelegate.m in Sources */,
 				49B4916E17E10EC900D84AB2 /* LWSFlavourWheel.m in Sources */,
 				49B4917518044D4F00D84AB2 /* LWSHomeViewController.m in Sources */,
 				49B4917818044D7600D84AB2 /* LWSHomeDataSource.m in Sources */,
+				491669ED182A8ED8002B375A /* LWSFlavourMatchesView.m in Sources */,
 				49B4917B18044D8000D84AB2 /* LWSHomeDelegate.m in Sources */,
 				49B491861804551800D84AB2 /* LWSHomeView.m in Sources */,
 				491669E81829B2D8002B375A /* LWSFlavourMatchesViewController.m in Sources */,

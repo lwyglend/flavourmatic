@@ -14,7 +14,6 @@
 @property (nonatomic, strong) LWSHomeDataSource *homeViewDataSource;
 @property (nonatomic, strong) LWSHomeDelegate *homeViewDelegate;
 
-
 @end
 
 @implementation LWSHomeView

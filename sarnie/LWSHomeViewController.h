@@ -12,6 +12,8 @@
 
 @interface LWSHomeViewController : UIViewController
 
-+(instancetype)homeViewControllerWith:(LWSHomeDataSource*) dataSource andDelegate:(LWSHomeDelegate*)delegate;
++(instancetype)homeViewControllerWith:(LWSHomeDataSource*)dataSource
+                          andDelegate:(LWSHomeDelegate*)delegate
+      andFlavourMatchesViewController:(UIViewController *)viewController;
 
 @end

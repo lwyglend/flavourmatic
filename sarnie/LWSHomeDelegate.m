@@ -29,23 +29,15 @@
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    NSEnumerator *flavoursByGroupEnumerator = [self.flavourWheel.flavours objectEnumerator];
-    NSMutableArray *allFlavours = [NSMutableArray arrayWithCapacity:[self.flavourWheel numberOfFlavours]];
-    NSUInteger flavourCounter = 0;
-    NSUInteger withinFlavourGroupCounter;
-    
-    for( NSArray *flavoursByGroup in flavoursByGroupEnumerator ) {
-        for( withinFlavourGroupCounter = 0 ; withinFlavourGroupCounter < flavoursByGroup.count ; withinFlavourGroupCounter ++ ){
-            allFlavours[flavourCounter] = flavoursByGroup[withinFlavourGroupCounter];
-            flavourCounter ++;
-        }
-    }
+    NSMutableArray *allFlavours = [self.flavourWheel allFlavours];
     return allFlavours[row];
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     //handle action on selection
+    //because all of the objects have the same flavourwheel... i can update the selected row/flavour in the flavourwheel as the button is selected each time, and share this information across the whole app...?
+    [self.flavourWheel selectedFlavour: [self.flavourWheel allFlavours][row] ];
 }
 
 -(id)initWithFlavourWheel:(LWSFlavourWheel*)flavourWheel

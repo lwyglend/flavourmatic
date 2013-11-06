@@ -8,6 +8,7 @@
 
 #import "LWSAppDelegate.h"
 #import "LWSHomeViewController.h"
+#import "LWSFlavourMatchesViewController.h"
 #import "LWSHomeDataSource.h"
 #import "LWSHomeDelegate.h"
 
@@ -16,16 +17,27 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+
+    LWSFlavourWheel *flavourWheel = [[LWSFlavourWheel alloc] init];
+    
+    //Create flavour matches view controller, to be presented by root view controller
+    LWSFlavourMatchesDataSource *flavourMatchesDataSource = [LWSFlavourMatchesDataSource flavourMatchesDataSourceWithFlavourWheel:flavourWheel];
+    LWSFlavourMatchesDelegate *flavourMatchesDelegate = [LWSFlavourMatchesDelegate flavourMatchesDelegate];
+    LWSFlavourMatchesViewController *flavourMatchesViewController = [LWSFlavourMatchesViewController flavourMatchesViewControllerWithDataSource:flavourMatchesDataSource andDelegate:flavourMatchesDelegate];
     
     //Set root view controller, one shown on app launch
-    LWSFlavourWheel *flavourWheel = [[LWSFlavourWheel alloc] init];
     LWSHomeDataSource *homeDataSource =[LWSHomeDataSource homeDataSourceWithFlavourWheel:flavourWheel];
     LWSHomeDelegate *homeDelegate = [LWSHomeDelegate homeDelegateWithFlavourWheel:flavourWheel];
-    LWSHomeViewController *homeViewController = [LWSHomeViewController homeViewControllerWith:homeDataSource andDelegate:homeDelegate];
+    LWSHomeViewController *homeViewController = [LWSHomeViewController homeViewControllerWith:homeDataSource
+                                                                                  andDelegate:homeDelegate
+                                                                   andFlavourMatchesViewController:flavourMatchesViewController];
     
     self.window.rootViewController = homeViewController;
+    
+    
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -8,7 +8,23 @@
 
 #import "LWSFlavourWheel.h"
 
+@interface LWSFlavourWheel ()
+
+@property (nonatomic, readwrite) NSString *selectedFlavour;
+
+@end
+
 @implementation LWSFlavourWheel
+
+-(void)selectedFlavour:(NSString *)flavour
+{
+    self.selectedFlavour = flavour;
+}
+
+-(NSString *)selectedFlavour
+{
+    return self.selectedFlavour;
+}
 
 -(NSUInteger)numberOfFlavourGroups
 {
@@ -34,6 +50,23 @@
     }
     return NO;
 }
+
+-(NSMutableArray *)allFlavours
+{
+    NSEnumerator *flavoursByGroupEnumerator = [self.flavours objectEnumerator];
+    NSMutableArray *allFlavours = [NSMutableArray arrayWithCapacity:[self numberOfFlavours]];
+    NSUInteger flavourCounter = 0;
+    NSUInteger withinFlavourGroupCounter;
+    
+    for( NSArray *flavoursByGroup in flavoursByGroupEnumerator ) {
+        for( withinFlavourGroupCounter = 0 ; withinFlavourGroupCounter < flavoursByGroup.count ; withinFlavourGroupCounter ++ ){
+            allFlavours[flavourCounter] = flavoursByGroup[withinFlavourGroupCounter];
+            flavourCounter ++;
+        }
+    }
+    return allFlavours;
+}
+
 
 -(NSDictionary *)populateFlavours
 {
@@ -125,22 +158,13 @@
     return [NSDictionary dictionaryWithObjects:flavourMatches forKeys:flavours];
 }
 
-+(LWSFlavourWheel *)sharedFlavourWheel
-{
-    static LWSFlavourWheel *sharedFlavourWheel = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedFlavourWheel = [[LWSFlavourWheel alloc] init];
-    });
-    return sharedFlavourWheel;
-}
-
 - (id)init
 {
     self = [super init];
     if (self) {
         _flavours = [self populateFlavours];
         _flavourMatches = [self populateFlavourMatches];
+        _selectedFlavour = NULL;
     }
     return self;
 }
