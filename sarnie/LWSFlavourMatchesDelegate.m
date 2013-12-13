@@ -15,4 +15,9 @@
     return [[LWSFlavourMatchesDelegate alloc] init];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 10.0;
+}
+
 @end

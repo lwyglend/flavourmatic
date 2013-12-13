@@ -20,8 +20,8 @@
 -(id)initWithDataSource:(LWSFlavourMatchesDataSource *)dataSource andDelegate:(LWSFlavourMatchesDelegate *)delegate
 {
     self = [super init];
-    _flavourMatchesViewDataSource = dataSource;
-    _flavourMatchesViewDelegate = delegate;
+    self.dataSource = dataSource;
+    self.delegate = delegate;
     return self;
 }
 

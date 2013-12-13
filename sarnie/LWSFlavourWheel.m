@@ -8,23 +8,7 @@
 
 #import "LWSFlavourWheel.h"
 
-@interface LWSFlavourWheel ()
-
-@property (nonatomic, readwrite) NSString *selectedFlavour;
-
-@end
-
 @implementation LWSFlavourWheel
-
--(void)selectedFlavour:(NSString *)flavour
-{
-    self.selectedFlavour = flavour;
-}
-
--(NSString *)selectedFlavour
-{
-    return self.selectedFlavour;
-}
 
 -(NSUInteger)numberOfFlavourGroups
 {

@@ -23,12 +23,20 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
+    return 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSString *flavourCellIdentifier = @"flavourCell";
+    NSString *currentSelectedFlavour = [self.flavourWheel selectedFlavour];
+    UITableViewCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier:flavourCellIdentifier];
+    if(tableViewCell == nil)
+    {
+        tableViewCell = [[UITableViewCell alloc ]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:flavourCellIdentifier];
+    }
+   [tableViewCell.textLabel setText: currentSelectedFlavour];
+    return tableViewCell;
 }
 
 -(id)initWithFlavourWheel:(LWSFlavourWheel *)flavourWheel

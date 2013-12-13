@@ -60,7 +60,7 @@ andFlavourMatchesViewController:(UIViewController *)viewController
 {
     return [[LWSHomeViewController alloc] initWithDataSource:dataSource
                                                  andDelegate:delegate
-                                  andFlavourMatchesViewController:viewController];
+                             andFlavourMatchesViewController:viewController];
 }
 
 @end

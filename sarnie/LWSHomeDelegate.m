@@ -37,7 +37,8 @@
 {
     //handle action on selection
     //because all of the objects have the same flavourwheel... i can update the selected row/flavour in the flavourwheel as the button is selected each time, and share this information across the whole app...?
-    [self.flavourWheel selectedFlavour: [self.flavourWheel allFlavours][row] ];
+    NSString* currentSelectedFlavour = [self.flavourWheel allFlavours][row];
+    [self.flavourWheel setSelectedFlavour:currentSelectedFlavour];
 }
 
 -(id)initWithFlavourWheel:(LWSFlavourWheel*)flavourWheel
