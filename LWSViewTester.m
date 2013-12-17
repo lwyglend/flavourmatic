@@ -62,6 +62,12 @@
             }];
 }
 
++(NSArray *)findTableViewCellsIn:(NSArray *)subviews containingTextInArray:(NSArray *)arrayOfFlavours
+{
+    
+    return @[];
+}
+
 
 + (void)assertThatFrameOriginAndSizeIsNonZero:(UIView *)view
 {

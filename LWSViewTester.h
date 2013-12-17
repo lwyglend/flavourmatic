@@ -14,5 +14,6 @@
 +(UIView *)findFirstUIViewIn:(NSArray *)subviews withLabelText:(NSString *)expectedText;
 +(UIView *)findFirstUIViewIn:(NSArray *)subviews withAccessibilityLabelText:(NSString *)expectedText;
 +(void)assertThatFrameOriginAndSizeIsNonZero:(UIView*)view;
++(NSArray *)findTableViewCellsIn:(NSArray *)subviews containingTextInArray:(NSArray *)arrayOfFlavours;
 
 @end

@@ -25,11 +25,6 @@
     _homeView = [LWSHomeView homeViewWithDataSource:[[LWSHomeViewDataSource alloc] init] andDelegate:[[LWSHomeViewDelegate alloc]init] ];
 }
 
--(void)testThatHomeViewIsCreated
-{
-    assertThat(self.homeView, isNot(NULL));
-}
-
 -(void)testFlavourPickerIsDisplayed
 {
     //given
@@ -40,7 +35,8 @@
     
     //then
     UIView *picker = [LWSViewTester findFirstUIViewIn:subviews withAccessibilityLabelText:expectedFlavourPickerAccessibilityText];
-    [LWSViewTester assertThatFrameOriginAndSizeIsNonZero:picker];
+//    [LWSViewTester assertThatFrameOriginAndSizeIsNonZero:picker];
+    assertThat([picker class], is([UIPickerView class]));
 }
 
 -(void)testFindFlavourMatchesButtonIsDisplayedWithCorrectText
