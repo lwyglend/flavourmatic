@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LWSHomeDataSource.h"
-#import "LWSHomeDelegate.h"
+#import "LWSHomeViewDataSource.h"
+#import "LWSHomeViewDelegate.h"
 
 @interface LWSHomeView : UIView
 
 @property (nonatomic,strong) UIButton *findFlavourMatchesButton;
 
-+(instancetype)homeViewWithDataSource:(LWSHomeDataSource *)dataSource andDelegate:(LWSHomeDelegate *)delegate;
++(instancetype)homeViewWithDataSource:(LWSHomeViewDataSource *)dataSource andDelegate:(LWSHomeViewDelegate *)delegate;
 
 @end

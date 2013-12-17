@@ -9,8 +9,8 @@
 #import "LWSAppDelegate.h"
 #import "LWSHomeViewController.h"
 #import "LWSFlavourMatchesViewController.h"
-#import "LWSHomeDataSource.h"
-#import "LWSHomeDelegate.h"
+#import "LWSHomeViewDataSource.h"
+#import "LWSHomeViewDelegate.h"
 
 @implementation LWSAppDelegate
 
@@ -29,8 +29,8 @@
     LWSFlavourMatchesViewController *flavourMatchesViewController = [LWSFlavourMatchesViewController flavourMatchesViewControllerWithDataSource:flavourMatchesDataSource andDelegate:flavourMatchesDelegate];
     
     //Set root view controller, one shown on app launch
-    LWSHomeDataSource *homeDataSource =[LWSHomeDataSource homeDataSourceWithFlavourWheel:flavourWheel];
-    LWSHomeDelegate *homeDelegate = [LWSHomeDelegate homeDelegateWithFlavourWheel:flavourWheel];
+    LWSHomeViewDataSource *homeDataSource =[LWSHomeViewDataSource homeDataSourceWithFlavourWheel:flavourWheel];
+    LWSHomeViewDelegate *homeDelegate = [LWSHomeViewDelegate homeViewDelegateWithFlavourWheel:flavourWheel];
     LWSHomeViewController *homeViewController = [LWSHomeViewController homeViewControllerWith:homeDataSource
                                                                                   andDelegate:homeDelegate
                                                                    andFlavourMatchesViewController:flavourMatchesViewController];

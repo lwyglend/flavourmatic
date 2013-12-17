@@ -73,7 +73,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "sarnie/LWSHomeDataSource.h"
+            filePath = "sarnie/LWSHomeViewDataSource.h"
             timestampString = "405009651.858926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -97,22 +97,6 @@
             endingLineNumber = "15"
             landmarkName = "+flavourMatchesViewWithDataSource:andDelegate:"
             landmarkType = "4">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "sarnie/LWSHomeDelegate.m"
-            timestampString = "405452447.307681"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "-pickerView:didSelectRow:inComponent:"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

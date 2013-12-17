@@ -22,7 +22,7 @@
 
 -(void)setUp
 {
-    _homeView = [LWSHomeView homeViewWithDataSource:[[LWSHomeDataSource alloc] init] andDelegate:[[LWSHomeDelegate alloc]init] ];
+    _homeView = [LWSHomeView homeViewWithDataSource:[[LWSHomeViewDataSource alloc] init] andDelegate:[[LWSHomeViewDelegate alloc]init] ];
 }
 
 -(void)testThatHomeViewIsCreated

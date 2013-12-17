@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Laura Wyglendacz. All rights reserved.
 //
 
-#import "LWSHomeDataSource.h"
+#import "LWSHomeViewDataSource.h"
 
-@interface LWSHomeDataSource ()
+@interface LWSHomeViewDataSource ()
 
 @property LWSFlavourWheel *flavourWheel;
 
 @end
 
-@implementation LWSHomeDataSource
+@implementation LWSHomeViewDataSource
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -36,7 +36,7 @@
 
 +(instancetype)homeDataSourceWithFlavourWheel:(LWSFlavourWheel *)flavourWheel
 {
-    return [[LWSHomeDataSource alloc] initWithFlavourWheel:flavourWheel];
+    return [[LWSHomeViewDataSource alloc] initWithFlavourWheel:flavourWheel];
 }
 
 @end

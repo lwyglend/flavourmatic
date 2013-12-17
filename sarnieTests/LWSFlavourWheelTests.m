@@ -1,21 +1,15 @@
-//
-//  algorithmTests.m
-//  algorithmTests
-//
-//  Created by Laura Wyglendacz on 09/08/2013.
-//  Copyright (c) 2013 Laura Wyglendacz. All rights reserved.
-//
+
 
 #define HC_SHORTHAND
 #import <OCHamcrest.h>
-#import "LWSFlavourTests.h"
+#import "LWSFlavourWheelTests.h"
 #import "LWSFlavourWheel.h"
 
-@interface LWSFlavourTests()
+@interface LWSFlavourWheelTests()
 @property (nonatomic, readonly) LWSFlavourWheel *flavourCollection;
 @end
 
-@implementation LWSFlavourTests
+@implementation LWSFlavourWheelTests
 
 - (void)setUp
 {

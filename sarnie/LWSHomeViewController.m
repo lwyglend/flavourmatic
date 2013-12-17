@@ -13,8 +13,8 @@
 @interface LWSHomeViewController ()
 
 @property(nonatomic,readonly) LWSHomeView *homeView;
-@property (nonatomic, readonly) LWSHomeDelegate *homeDelegate;
-@property (nonatomic, readonly) LWSHomeDataSource *homeDataSource;
+@property (nonatomic, readonly) LWSHomeViewDelegate *homeDelegate;
+@property (nonatomic, readonly) LWSHomeViewDataSource *homeDataSource;
 @property (nonatomic, readonly) UIViewController *flavourMatchesViewController;
 
 @end
@@ -42,8 +42,8 @@
     [self presentViewController:self.flavourMatchesViewController animated:YES completion:nil];
 }
 
--(id)initWithDataSource:(LWSHomeDataSource*)dataSource
-            andDelegate:(LWSHomeDelegate*)delegate
+-(id)initWithDataSource:(LWSHomeViewDataSource*)dataSource
+            andDelegate:(LWSHomeViewDelegate*)delegate
 andFlavourMatchesViewController:(UIViewController *)viewController
 {
     self = [super init];
@@ -53,8 +53,8 @@ andFlavourMatchesViewController:(UIViewController *)viewController
     return self;
 }
 
-+(instancetype)homeViewControllerWith:(LWSHomeDataSource*) dataSource
-                          andDelegate:(LWSHomeDelegate*)delegate
++(instancetype)homeViewControllerWith:(LWSHomeViewDataSource*) dataSource
+                          andDelegate:(LWSHomeViewDelegate*)delegate
            andFlavourMatchesViewController:(UIViewController *)viewController
 
 {

@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Laura Wyglendacz. All rights reserved.
 //
 
-#import "LWSHomeDelegate.h"
+#import "LWSHomeViewDelegate.h"
 #import "LWSFlavourWheel.h"
 
-@interface LWSHomeDelegate ()
+@interface LWSHomeViewDelegate ()
 
 @property LWSFlavourWheel * flavourWheel;
 
 @end
 
-@implementation LWSHomeDelegate
+@implementation LWSHomeViewDelegate
 
 -(CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
@@ -35,22 +35,28 @@
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    //handle action on selection
-    //because all of the objects have the same flavourwheel... i can update the selected row/flavour in the flavourwheel as the button is selected each time, and share this information across the whole app...?
     NSString* currentSelectedFlavour = [self.flavourWheel allFlavours][row];
     [self.flavourWheel setSelectedFlavour:currentSelectedFlavour];
+}
+
+-(void)setInitialSelectedFlavour
+{
+    NSInteger initialFlavourRow = 0;
+    NSString *initialSelectedFlavour = [self.flavourWheel allFlavours][initialFlavourRow];
+    [self.flavourWheel setSelectedFlavour:initialSelectedFlavour];
 }
 
 -(id)initWithFlavourWheel:(LWSFlavourWheel*)flavourWheel
 {
     self = [super init];
     _flavourWheel = flavourWheel;
+    [self setInitialSelectedFlavour];
     return self;
 }
 
-+(instancetype)homeDelegateWithFlavourWheel:(LWSFlavourWheel *)flavourWheel
++(instancetype)homeViewDelegateWithFlavourWheel:(LWSFlavourWheel *)flavourWheel
 {
-    return [[LWSHomeDelegate alloc] initWithFlavourWheel:flavourWheel];
+    return [[LWSHomeViewDelegate alloc] initWithFlavourWheel:flavourWheel];
 }
 
 @ end

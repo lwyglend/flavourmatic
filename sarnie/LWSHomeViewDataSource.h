@@ -1,5 +1,5 @@
 //
-//  LWSHomeDelegate.h
+//  LWSHomeDataSource.h
 //  sarnie
 //
 //  Created by Laura Wyglendacz on 08/10/2013.
@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "LWSFlavourWheel.h"
 
-@interface LWSHomeDelegate : NSObject <UIPickerViewDelegate>
+@interface LWSHomeViewDataSource : NSObject <UIPickerViewDataSource>
 
-+(instancetype)homeDelegateWithFlavourWheel:(LWSFlavourWheel *)flavourWheel;
++(instancetype)homeDataSourceWithFlavourWheel:(LWSFlavourWheel*)flavourWheel;
 
 @end

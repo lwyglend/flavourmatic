@@ -25,13 +25,13 @@
 		493C48CF17B51F8600D2447F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48AF17B51F8600D2447F /* UIKit.framework */; };
 		493C48D017B51F8600D2447F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493C48B117B51F8600D2447F /* Foundation.framework */; };
 		493C48D817B51F8600D2447F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 493C48D617B51F8600D2447F /* InfoPlist.strings */; };
-		493C48DB17B51F8600D2447F /* LWSFlavourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 493C48DA17B51F8600D2447F /* LWSFlavourTests.m */; };
+		493C48DB17B51F8600D2447F /* LWSFlavourWheelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 493C48DA17B51F8600D2447F /* LWSFlavourWheelTests.m */; };
+		49762D0C1860A26300CD4B10 /* LWSHomeViewDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49762D0B1860A26300CD4B10 /* LWSHomeViewDelegateTests.m */; };
 		49B4916E17E10EC900D84AB2 /* LWSFlavourWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4916D17E10EC900D84AB2 /* LWSFlavourWheel.m */; };
 		49B491721802DEC800D84AB2 /* LWSFlavourMatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B491711802DEC800D84AB2 /* LWSFlavourMatchTests.m */; };
 		49B4917518044D4F00D84AB2 /* LWSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4917418044D4F00D84AB2 /* LWSHomeViewController.m */; };
-		49B4917818044D7600D84AB2 /* LWSHomeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4917718044D7600D84AB2 /* LWSHomeDataSource.m */; };
-		49B4917B18044D8000D84AB2 /* LWSHomeDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4917A18044D8000D84AB2 /* LWSHomeDelegate.m */; };
-		49B4917F18044E0A00D84AB2 /* LWSHomeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4917E18044E0A00D84AB2 /* LWSHomeViewControllerTests.m */; };
+		49B4917818044D7600D84AB2 /* LWSHomeViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4917718044D7600D84AB2 /* LWSHomeViewDataSource.m */; };
+		49B4917B18044D8000D84AB2 /* LWSHomeViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B4917A18044D8000D84AB2 /* LWSHomeViewDelegate.m */; };
 		49B49183180450B400D84AB2 /* LWSHomeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B49182180450B400D84AB2 /* LWSHomeViewTests.m */; };
 		49B491861804551800D84AB2 /* LWSHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B491851804551800D84AB2 /* LWSHomeView.m */; };
 		49B4918A1804561A00D84AB2 /* LWSViewTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B491891804561A00D84AB2 /* LWSViewTester.m */; };
@@ -75,20 +75,20 @@
 		493C48CD17B51F8600D2447F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		493C48D517B51F8600D2447F /* sarnieTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sarnieTests-Info.plist"; sourceTree = "<group>"; };
 		493C48D717B51F8600D2447F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		493C48D917B51F8600D2447F /* LWSFlavourTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWSFlavourTests.h; sourceTree = "<group>"; };
-		493C48DA17B51F8600D2447F /* LWSFlavourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourTests.m; sourceTree = "<group>"; };
+		493C48D917B51F8600D2447F /* LWSFlavourWheelTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWSFlavourWheelTests.h; sourceTree = "<group>"; };
+		493C48DA17B51F8600D2447F /* LWSFlavourWheelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourWheelTests.m; sourceTree = "<group>"; };
+		49762D0A1860A26300CD4B10 /* LWSHomeViewDelegateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeViewDelegateTests.h; sourceTree = "<group>"; };
+		49762D0B1860A26300CD4B10 /* LWSHomeViewDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeViewDelegateTests.m; sourceTree = "<group>"; };
 		49B4916C17E10EC900D84AB2 /* LWSFlavourWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSFlavourWheel.h; sourceTree = "<group>"; };
 		49B4916D17E10EC900D84AB2 /* LWSFlavourWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourWheel.m; sourceTree = "<group>"; };
 		49B491701802DEC800D84AB2 /* LWSFlavourMatchTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSFlavourMatchTests.h; sourceTree = "<group>"; };
 		49B491711802DEC800D84AB2 /* LWSFlavourMatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSFlavourMatchTests.m; sourceTree = "<group>"; };
 		49B4917318044D4F00D84AB2 /* LWSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeViewController.h; sourceTree = "<group>"; };
 		49B4917418044D4F00D84AB2 /* LWSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeViewController.m; sourceTree = "<group>"; };
-		49B4917618044D7600D84AB2 /* LWSHomeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeDataSource.h; sourceTree = "<group>"; };
-		49B4917718044D7600D84AB2 /* LWSHomeDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeDataSource.m; sourceTree = "<group>"; };
-		49B4917918044D8000D84AB2 /* LWSHomeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeDelegate.h; sourceTree = "<group>"; };
-		49B4917A18044D8000D84AB2 /* LWSHomeDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeDelegate.m; sourceTree = "<group>"; };
-		49B4917D18044E0A00D84AB2 /* LWSHomeViewControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeViewControllerTests.h; sourceTree = "<group>"; };
-		49B4917E18044E0A00D84AB2 /* LWSHomeViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeViewControllerTests.m; sourceTree = "<group>"; };
+		49B4917618044D7600D84AB2 /* LWSHomeViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeViewDataSource.h; sourceTree = "<group>"; };
+		49B4917718044D7600D84AB2 /* LWSHomeViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeViewDataSource.m; sourceTree = "<group>"; };
+		49B4917918044D8000D84AB2 /* LWSHomeViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeViewDelegate.h; sourceTree = "<group>"; };
+		49B4917A18044D8000D84AB2 /* LWSHomeViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeViewDelegate.m; sourceTree = "<group>"; };
 		49B49181180450B400D84AB2 /* LWSHomeViewTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeViewTests.h; sourceTree = "<group>"; };
 		49B49182180450B400D84AB2 /* LWSHomeViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSHomeViewTests.m; sourceTree = "<group>"; };
 		49B491841804551800D84AB2 /* LWSHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSHomeView.h; sourceTree = "<group>"; };
@@ -131,10 +131,10 @@
 			children = (
 				49B4917318044D4F00D84AB2 /* LWSHomeViewController.h */,
 				49B4917418044D4F00D84AB2 /* LWSHomeViewController.m */,
-				49B4917618044D7600D84AB2 /* LWSHomeDataSource.h */,
-				49B4917718044D7600D84AB2 /* LWSHomeDataSource.m */,
-				49B4917918044D8000D84AB2 /* LWSHomeDelegate.h */,
-				49B4917A18044D8000D84AB2 /* LWSHomeDelegate.m */,
+				49B4917618044D7600D84AB2 /* LWSHomeViewDataSource.h */,
+				49B4917718044D7600D84AB2 /* LWSHomeViewDataSource.m */,
+				49B4917918044D8000D84AB2 /* LWSHomeViewDelegate.h */,
+				49B4917A18044D8000D84AB2 /* LWSHomeViewDelegate.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -290,8 +290,8 @@
 		49B4916F1802DC5A00D84AB2 /* ModelTests */ = {
 			isa = PBXGroup;
 			children = (
-				493C48D917B51F8600D2447F /* LWSFlavourTests.h */,
-				493C48DA17B51F8600D2447F /* LWSFlavourTests.m */,
+				493C48D917B51F8600D2447F /* LWSFlavourWheelTests.h */,
+				493C48DA17B51F8600D2447F /* LWSFlavourWheelTests.m */,
 				49B491701802DEC800D84AB2 /* LWSFlavourMatchTests.h */,
 				49B491711802DEC800D84AB2 /* LWSFlavourMatchTests.m */,
 			);
@@ -301,8 +301,8 @@
 		49B4917C18044DDF00D84AB2 /* ControllerTests */ = {
 			isa = PBXGroup;
 			children = (
-				49B4917D18044E0A00D84AB2 /* LWSHomeViewControllerTests.h */,
-				49B4917E18044E0A00D84AB2 /* LWSHomeViewControllerTests.m */,
+				49762D0A1860A26300CD4B10 /* LWSHomeViewDelegateTests.h */,
+				49762D0B1860A26300CD4B10 /* LWSHomeViewDelegateTests.m */,
 			);
 			name = ControllerTests;
 			sourceTree = "<group>";
@@ -505,9 +505,9 @@
 				493C48C017B51F8600D2447F /* LWSAppDelegate.m in Sources */,
 				49B4916E17E10EC900D84AB2 /* LWSFlavourWheel.m in Sources */,
 				49B4917518044D4F00D84AB2 /* LWSHomeViewController.m in Sources */,
-				49B4917818044D7600D84AB2 /* LWSHomeDataSource.m in Sources */,
+				49B4917818044D7600D84AB2 /* LWSHomeViewDataSource.m in Sources */,
 				491669ED182A8ED8002B375A /* LWSFlavourMatchesView.m in Sources */,
-				49B4917B18044D8000D84AB2 /* LWSHomeDelegate.m in Sources */,
+				49B4917B18044D8000D84AB2 /* LWSHomeViewDelegate.m in Sources */,
 				49B491861804551800D84AB2 /* LWSHomeView.m in Sources */,
 				491669E81829B2D8002B375A /* LWSFlavourMatchesViewController.m in Sources */,
 			);
@@ -517,9 +517,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				493C48DB17B51F8600D2447F /* LWSFlavourTests.m in Sources */,
+				49762D0C1860A26300CD4B10 /* LWSHomeViewDelegateTests.m in Sources */,
+				493C48DB17B51F8600D2447F /* LWSFlavourWheelTests.m in Sources */,
 				49B491721802DEC800D84AB2 /* LWSFlavourMatchTests.m in Sources */,
-				49B4917F18044E0A00D84AB2 /* LWSHomeViewControllerTests.m in Sources */,
 				49B49183180450B400D84AB2 /* LWSHomeViewTests.m in Sources */,
 				49B4918A1804561A00D84AB2 /* LWSViewTester.m in Sources */,
 			);

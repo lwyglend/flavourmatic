@@ -11,8 +11,8 @@
 @interface LWSHomeView ()
 
 @property (nonatomic,strong) UIPickerView *flavourPickerView;
-@property (nonatomic, strong) LWSHomeDataSource *homeViewDataSource;
-@property (nonatomic, strong) LWSHomeDelegate *homeViewDelegate;
+@property (nonatomic, strong) LWSHomeViewDataSource *homeViewDataSource;
+@property (nonatomic, strong) LWSHomeViewDelegate *homeViewDelegate;
 
 @end
 
@@ -60,7 +60,7 @@
     [self addSubview:self.flavourPickerView];
 }
 
--(id)initWithDataSource:(LWSHomeDataSource *)dataSource andDelegate:(LWSHomeDelegate *)delegate
+-(id)initWithDataSource:(LWSHomeViewDataSource *)dataSource andDelegate:(LWSHomeViewDelegate *)delegate
 {
     self = [super init];
     _homeViewDataSource = dataSource;
@@ -69,7 +69,7 @@
     return self;
 }
 
-+(instancetype)homeViewWithDataSource:(LWSHomeDataSource *)dataSource andDelegate:(LWSHomeDelegate *)delegate
++(instancetype)homeViewWithDataSource:(LWSHomeViewDataSource *)dataSource andDelegate:(LWSHomeViewDelegate *)delegate
 {
     return [[LWSHomeView alloc] initWithDataSource:dataSource andDelegate:delegate];
 }
