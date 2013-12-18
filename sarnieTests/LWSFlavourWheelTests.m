@@ -47,22 +47,22 @@
     //when
     
     //then
-    assertThat( self.flavourCollection.flavours, hasKey(marineFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(sulphurusFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(mustardyFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(earthyFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(cheesyFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(meatyFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(roastedFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(floralFruityFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(brambleAndHedgeFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(citrussyFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(creamyFruityFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(freshFruityFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(woodlandFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(spicyFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(greenAndGrassyFlavourGroup) );
-    assertThat( self.flavourCollection.flavours, hasKey(brineAndSaltFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(marineFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(sulphurusFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(mustardyFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(earthyFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(cheesyFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(meatyFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(roastedFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(floralFruityFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(brambleAndHedgeFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(citrussyFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(creamyFruityFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(freshFruityFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(woodlandFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(spicyFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(greenAndGrassyFlavourGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasKey(brineAndSaltFlavourGroup) );
 }
 
 - (void)testThatAllFlavoursByGroupAreAdded
@@ -88,22 +88,22 @@
     //when
     
     //then
-    assertThat( self.flavourCollection.flavours, hasValue(marineFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(sulphurusFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(mustardyFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(earthyFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(cheesyFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(meatyFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(roastedFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(floralFruityFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(brambleAndHedgeFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(citrussyFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(creamyFruityFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(freshFruityFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(woodlandFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(spicyFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(greenAndGrassyFlavoursByGroup) );
-    assertThat( self.flavourCollection.flavours, hasValue(brineAndSaltFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(marineFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(sulphurusFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(mustardyFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(earthyFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(cheesyFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(meatyFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(roastedFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(floralFruityFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(brambleAndHedgeFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(citrussyFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(creamyFruityFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(freshFruityFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(woodlandFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(spicyFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(greenAndGrassyFlavoursByGroup) );
+    assertThat( self.flavourCollection.flavoursByGroup, hasValue(brineAndSaltFlavoursByGroup) );
 }
 
 -(void)testThatCorrectNumberOfFlavoursReturnedByNumberOfFlavours
