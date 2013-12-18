@@ -35,7 +35,10 @@
     {
         tableViewCell = [[UITableViewCell alloc ]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:flavourCellIdentifier];
     }
-   [tableViewCell.textLabel setText: currentSelectedFlavour];
+    
+    NSArray *flavourMatchArray = [[self.flavourWheel flavourMatches] valueForKey:currentSelectedFlavour];
+    NSString *text = [flavourMatchArray objectAtIndex:[indexPath row]];
+    [tableViewCell.textLabel setText: text];
     return tableViewCell;
 }
 

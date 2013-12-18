@@ -62,13 +62,6 @@
             }];
 }
 
-+(NSArray *)findTableViewCellsIn:(NSArray *)subviews containingTextInArray:(NSArray *)arrayOfFlavours
-{
-    
-    return @[];
-}
-
-
 + (void)assertThatFrameOriginAndSizeIsNonZero:(UIView *)view
 {
     assertThatInteger(view.frame.size.height, greaterThan(@0));

@@ -35,7 +35,6 @@
     
     //then
     UIView *picker = [LWSViewTester findFirstUIViewIn:subviews withAccessibilityLabelText:expectedFlavourPickerAccessibilityText];
-//    [LWSViewTester assertThatFrameOriginAndSizeIsNonZero:picker];
     assertThat([picker class], is([UIPickerView class]));
 }
 

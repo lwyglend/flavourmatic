@@ -24,7 +24,6 @@
     [super viewDidLoad];
     _flavourMatchesView = [LWSFlavourMatchesView flavourMatchesViewWithDataSource:self.flavourMatchesDataSource andDelegate:self.flavourMatchesDelegate];
     self.tableView = _flavourMatchesView;
-//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"flavourCell"];
 }
 
 -(id)initWithDataSource:(LWSFlavourMatchesDataSource *)dataSource andDelegate:(LWSFlavourMatchesDelegate *)delegate

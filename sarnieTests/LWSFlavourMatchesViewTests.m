@@ -26,23 +26,24 @@
 -(void)setUp
 {
     _flavourWheel = [[LWSFlavourWheel alloc] init];
-
+    _matchesView = [LWSFlavourMatchesView flavourMatchesViewWithDataSource:[LWSFlavourMatchesDataSource flavourMatchesDataSourceWithFlavourWheel:self.flavourWheel] andDelegate:[LWSFlavourMatchesDelegate flavourMatchesDelegate] ];
 }
 
--(void)testCorrectMatchesAreDisplayedWhenFlavourCoffeeHasBeenSelected
-{
-    //given
-    [self.flavourWheel setSelectedFlavour:@"Coffee"];
-    NSArray *coffeeFlavourMatches = @[@"Chocolate"];
-    
-    //when
-    _matchesView = [LWSFlavourMatchesView flavourMatchesViewWithDataSource:[LWSFlavourMatchesDataSource flavourMatchesDataSourceWithFlavourWheel:_flavourWheel] andDelegate:[LWSFlavourMatchesDelegate flavourMatchesDelegate] ];
-    NSArray *subviews = self.matchesView.subviews;
-    
-    //then
-    NSArray *resultViews = [LWSViewTester findTableViewCellsIn:subviews containingTextInArray:coffeeFlavourMatches];
-    assertThat([NSNumber numberWithInt:resultViews.count], is(@1));
-    
-}
+//-(void)testAllCorrectMatchesAreDisplayedWhenFlavourCoffeeHasBeenSelected
+//{
+//    //given
+//    [self.flavourWheel setSelectedFlavour:@"Coffee"];
+//    NSArray *coffeeFlavourMatches = @[@"Chocolate"];
+//    
+//    //when
+//    
+//    //then
+//    for(NSString* flavour in coffeeFlavourMatches)
+//    {
+//        UIView *tableViewCell = [LWSViewTester findFirstUIViewIn:self.matchesView.visibleCells
+//                                                   withLabelText:flavour];
+//        assertThat(tableViewCell, notNilValue());
+//    }
+//}
 
 @end
