@@ -12,8 +12,7 @@
 
 -(NSUInteger)numberOfFlavourGroups
 {
-//    return [[[self.flavoursByGroup objectEnumerator] allObjects] count];
-        return [[[self.flavoursByGroup keyEnumerator] allObjects] count];
+    return [[[self.flavoursByGroup keyEnumerator] allObjects] count];
 }
 
 -(NSUInteger)numberOfFlavours
@@ -107,97 +106,97 @@
 
 -(NSDictionary *)populateFlavourMatches
 {
-    NSArray *oilyFishFlavourMatches = @[];
-    NSArray *caviarFlavourMatches = @[];
-    NSArray *oysterFlavourMatches = @[];
-    NSArray *whiteFishFlavourMatches = @[];
-    NSArray *shellfishFlavourMatches = @[];
-    NSArray *eggFlavourMatches = @[];
-    NSArray *asparagusFlavourMatches = @[];
-    NSArray *horseradishFlavourMatches = @[];
-    NSArray *caperFlavourMatches = @[];
-    NSArray *watercressFlavourMatches = @[];
-    NSArray *celeryFlavourMatches = @[];
-    NSArray *potatoFlavourMatches = @[];
-    NSArray *beetrootFlavourMatches = @[];
-    NSArray *cuminFlavourMatches = @[];
-    NSArray *aubergineFlavourMatches = @[];
-    NSArray *mushroomFlavourMatches = @[];
-    NSArray *softCheeseFlavourMatches = @[];
-    NSArray *hardCheeseFlavourMatches = @[];
-    NSArray *blueCheeseFlavourMatches = @[];
-    NSArray *washedRindCheeseFlavourMatches = @[];
-    NSArray *goatsCheeseFlavourMatches = @[];
-    NSArray *lambFlavourMatches = @[];
-    NSArray *beefFlavourMatches = @[];
-    NSArray *liverFlavourMatches = @[];
-    NSArray *blackPuddingFlavourMatches = @[];
-    NSArray *porkFlavourMatches = @[];
-    NSArray *chickenFlavourMatches = @[];
-    NSArray *peanutFlavourMatches = @[];
+    NSArray *oilyFishFlavourMatches = @[@"Lemon"];
+    NSArray *caviarFlavourMatches = @[@"Oily Fish"];
+    NSArray *oysterFlavourMatches = @[@"Lemon"];
+    NSArray *whiteFishFlavourMatches = @[@"Tomato"];
+    NSArray *shellfishFlavourMatches = @[@"Pork"];
+    NSArray *eggFlavourMatches = @[@"Potato"];
+    NSArray *asparagusFlavourMatches = @[@"Lemon"];
+    NSArray *horseradishFlavourMatches = @[@"Beef"];
+    NSArray *caperFlavourMatches = @[@"Oily Fish"];
+    NSArray *watercressFlavourMatches = @[@"Beef"];
+    NSArray *celeryFlavourMatches = @[@"Potato"];
+    NSArray *potatoFlavourMatches = @[@"Egg"];
+    NSArray *beetrootFlavourMatches = @[@"Oily Fish"];
+    NSArray *cuminFlavourMatches = @[@"Lamb"];
+    NSArray *aubergineFlavourMatches = @[@"Lamb"];
+    NSArray *mushroomFlavourMatches = @[@"Blue Cheese"];
+    NSArray *softCheeseFlavourMatches = @[@"Walnut"];
+    NSArray *hardCheeseFlavourMatches = @[@"Grape"];
+    NSArray *blueCheeseFlavourMatches = @[@"Fig"];
+    NSArray *washedRindCheeseFlavourMatches = @[@"Apple"];
+    NSArray *goatsCheeseFlavourMatches = @[@"Beetroot"];
+    NSArray *lambFlavourMatches = @[@"Mint"];
+    NSArray *beefFlavourMatches = @[@"Onion"];
+    NSArray *liverFlavourMatches = @[@"Onion"];
+    NSArray *blackPuddingFlavourMatches = @[@"Bacon"];
+    NSArray *porkFlavourMatches = @[@"Peanut"];
+    NSArray *chickenFlavourMatches = @[@"Bacon"];
+    NSArray *peanutFlavourMatches = @[@"Lime"];
     NSArray *coffeeFlavourMatches = @[@"Chocolate"];
     NSArray *chocolateFlavourMatches = @[@"Coffee", @"Cardamom", @"Vanilla"];
-    NSArray *whiteChocolateFlavourMatches = @[];
-    NSArray *vanillaFlavourMatches = @[];
-    NSArray *corianderSeedFlavourMatches = @[];
-    NSArray *blueberryFlavourMatches = @[];
-    NSArray *roseFlavourMatches = @[];
-    NSArray *figFlavourMatches = @[];
-    NSArray *raspberryFlavourMatches = @[];
-    NSArray *blackberryFlavourMatches = @[];
-    NSArray *blackcurrantFlavourMatches = @[];
-    NSArray *mintFlavourMatches = @[];
-    NSArray *thymeFlavourMatches = @[];
-    NSArray *juniperFlavourMatches = @[];
-    NSArray *sageFlavourMatches = @[];
-    NSArray *rosemaryFlavourMatches = @[];
-    NSArray *cardamomFlavourMatches = @[];
-    NSArray *gingerFlavourMatches = @[];
-    NSArray *lemonFlavourMatches = @[];
-    NSArray *limeFlavourMatches = @[];
-    NSArray *grapefruitFlavourMatches = @[];
-    NSArray *orangeFlavourMatches = @[];
-    NSArray *mangoFlavourMatches = @[];
-    NSArray *coconutFlavourMatches = @[];
-    NSArray *peachFlavourMatches = @[];
-    NSArray *apricotFlavourMatches = @[];
-    NSArray *melonFlavourMatches = @[];
-    NSArray *bananaFlavourMatches = @[];
-    NSArray *pearFlavourMatches = @[];
-    NSArray *appleFlavourMatches = @[];
-    NSArray *pineappleFlavourMatches = @[];
-    NSArray *strawberryFlavourMatches = @[];
-    NSArray *tomatoFlavourMatches = @[];
-    NSArray *rhubarbFlavourMatches = @[];
-    NSArray *grapeFlavourMatches = @[];
-    NSArray *watermelonFlavourMatches = @[];
-    NSArray *cherryFlavourMatches = @[];
-    NSArray *almondFlavourMatches = @[];
-    NSArray *hazelnutFlavourMatches = @[];
-    NSArray *walnutFlavourMatches = @[];
-    NSArray *chestnutFlavourMatches = @[];
-    NSArray *butternutSquashFlavourMatches = @[];
-    NSArray *carrotFlavourMatches = @[];
-    NSArray *parsnipFlavourMatches = @[];
-    NSArray *nutmegFlavourMatches = @[];
-    NSArray *cloveFlavourMatches = @[];
-    NSArray *cinnamonFlavourMatches = @[];
-    NSArray *basilFlavourMatches = @[];
-    NSArray *chilliFlavourMatches = @[];
-    NSArray *bellPepperFlavourMatches = @[];
-    NSArray *peaFlavourMatches = @[];
-    NSArray *avocadoFlavourMatches = @[];
-    NSArray *corianderLeafFlavourMatches = @[];
-    NSArray *parselyFlavourMatches = @[];
-    NSArray *dillFlavourMatches = @[];
-    NSArray *cucumberFlavourMatches = @[];
-    NSArray *aniseFlavourMatches = @[];
-    NSArray *saffronFlavourMatches = @[];
-    NSArray *oliveFlavourMatches = @[];
-    NSArray *prosciuttoFlavourMatches = @[];
-    NSArray *baconFlavourMatches = @[];
-    NSArray *smokedFishFlavourMatches = @[];
-    NSArray *anchovyFlavourMatches = @[];
+    NSArray *whiteChocolateFlavourMatches = @[@"Raspberry"];
+    NSArray *vanillaFlavourMatches = @[@"Chocolate"];
+    NSArray *corianderSeedFlavourMatches = @[@"Cumin"];
+    NSArray *blueberryFlavourMatches = @[@"Vanilla"];
+    NSArray *roseFlavourMatches = @[@"Almond"];
+    NSArray *figFlavourMatches = @[@"Prosciutto", @"Blue Cheese"];
+    NSArray *raspberryFlavourMatches = @[@"Chocolate"];
+    NSArray *blackberryFlavourMatches = @[@"Ginger"];
+    NSArray *blackcurrantFlavourMatches = @[@"Lamb"];
+    NSArray *mintFlavourMatches = @[@"Goat's Cheese"];
+    NSArray *thymeFlavourMatches = @[@"Mushroom"];
+    NSArray *juniperFlavourMatches = @[@"Pork"];
+    NSArray *sageFlavourMatches = @[@"Pork"];
+    NSArray *rosemaryFlavourMatches = @[@"Potato"];
+    NSArray *cardamomFlavourMatches = @[@"Chocolate"];
+    NSArray *gingerFlavourMatches = @[@"Beef"];
+    NSArray *lemonFlavourMatches = @[@"White Fish"];
+    NSArray *limeFlavourMatches = @[@"Chilli"];
+    NSArray *grapefruitFlavourMatches = @[@"Mint"];
+    NSArray *orangeFlavourMatches = @[@"Chocolate"];
+    NSArray *mangoFlavourMatches = @[@"Cardamom"];
+    NSArray *coconutFlavourMatches = @[@"Pineapple"];
+    NSArray *peachFlavourMatches = @[@"Almond"];
+    NSArray *apricotFlavourMatches = @[@"Almond"];
+    NSArray *melonFlavourMatches = @[@"Shellfish"];
+    NSArray *bananaFlavourMatches = @[@"Chicken"];
+    NSArray *pearFlavourMatches = @[@"Cinnamon"];
+    NSArray *appleFlavourMatches = @[@"Pork"];
+    NSArray *pineappleFlavourMatches = @[@"Coconut"];
+    NSArray *strawberryFlavourMatches = @[@"Vanilla"];
+    NSArray *tomatoFlavourMatches = @[@"Olive"];
+    NSArray *rhubarbFlavourMatches = @[@"Ginger"];
+    NSArray *grapeFlavourMatches = @[@"Hard Cheese"];
+    NSArray *watermelonFlavourMatches = @[@"Anise"];
+    NSArray *cherryFlavourMatches = @[@"Almond"];
+    NSArray *almondFlavourMatches = @[@"Chocolate"];
+    NSArray *hazelnutFlavourMatches = @[@"Chocolate"];
+    NSArray *walnutFlavourMatches = @[@"Blue Cheese"];
+    NSArray *chestnutFlavourMatches = @[@"Mushroom"];
+    NSArray *butternutSquashFlavourMatches = @[@"Blue Cheese"];
+    NSArray *carrotFlavourMatches = @[@"Parsley"];
+    NSArray *parsnipFlavourMatches = @[@"Chilli"];
+    NSArray *nutmegFlavourMatches = @[@"Cinnamon"];
+    NSArray *cloveFlavourMatches = @[@"Orange"];
+    NSArray *cinnamonFlavourMatches = @[@"Pear"];
+    NSArray *basilFlavourMatches = @[@"Strawberry"];
+    NSArray *chilliFlavourMatches = @[@"Lime"];
+    NSArray *bellPepperFlavourMatches = @[@"Olive"];
+    NSArray *peaFlavourMatches = @[@"Mint"];
+    NSArray *avocadoFlavourMatches = @[@"Bacon"];
+    NSArray *corianderLeafFlavourMatches = @[@"Lime"];
+    NSArray *parsleyFlavourMatches = @[@"Mushroom"];
+    NSArray *dillFlavourMatches = @[@"Oily Fish"];
+    NSArray *cucumberFlavourMatches = @[@"Mint"];
+    NSArray *aniseFlavourMatches = @[@"White Fish"];
+    NSArray *saffronFlavourMatches = @[@"Tomato"];
+    NSArray *oliveFlavourMatches = @[@"Tomato"];
+    NSArray *prosciuttoFlavourMatches = @[@"Fig"];
+    NSArray *baconFlavourMatches = @[@"Avocado"];
+    NSArray *smokedFishFlavourMatches = @[@"Beetroot"];
+    NSArray *anchovyFlavourMatches = @[@"Beef"];
     
     NSArray *flavourMatches = @[oilyFishFlavourMatches,
                                 caviarFlavourMatches,
@@ -280,7 +279,7 @@
                                 peaFlavourMatches,
                                 avocadoFlavourMatches,
                                 corianderLeafFlavourMatches,
-                                parselyFlavourMatches,
+                                parsleyFlavourMatches,
                                 dillFlavourMatches,
                                 cucumberFlavourMatches,
                                 aniseFlavourMatches,

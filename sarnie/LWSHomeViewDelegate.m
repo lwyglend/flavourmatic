@@ -29,7 +29,7 @@
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    NSMutableArray *allFlavours = [self.flavourWheel allFlavours];
+    NSArray *allFlavours = [self.flavourWheel allFlavours];
     return allFlavours[row];
 }
 
