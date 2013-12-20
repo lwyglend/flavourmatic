@@ -4,12 +4,7 @@
     <list default="true" id="52678eae-bba8-41a8-8c35-67a2e49e1188" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sarnie.xcworkspace/xcuserdata/lwyglend.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/sarnie.xcworkspace/xcuserdata/lwyglend.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sarnie.xcworkspace/xcuserdata/lwyglend.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/sarnie.xcworkspace/xcuserdata/lwyglend.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sarnie/LWSFlavourMatchesDataSource.m" afterPath="$PROJECT_DIR$/sarnie/LWSFlavourMatchesDataSource.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sarnie/LWSFlavourMatchesViewController.m" afterPath="$PROJECT_DIR$/sarnie/LWSFlavourMatchesViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sarnieTests/LWSFlavourMatchesViewTests.m" afterPath="$PROJECT_DIR$/sarnieTests/LWSFlavourMatchesViewTests.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sarnieTests/LWSHomeViewTests.m" afterPath="$PROJECT_DIR$/sarnieTests/LWSHomeViewTests.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LWSViewTester.h" afterPath="$PROJECT_DIR$/LWSViewTester.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LWSViewTester.m" afterPath="$PROJECT_DIR$/LWSViewTester.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sarnieTests/LWSFlavourWheelTests.m" afterPath="$PROJECT_DIR$/sarnieTests/LWSFlavourWheelTests.m" />
     </list>
     <ignored path="flavourmatic.iws" />
     <ignored path=".idea/workspace.xml" />

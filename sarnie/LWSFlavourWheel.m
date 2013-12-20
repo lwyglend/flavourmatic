@@ -12,17 +12,13 @@
 
 -(NSUInteger)numberOfFlavourGroups
 {
-    return [[[self.flavours objectEnumerator] allObjects] count];
+//    return [[[self.flavoursByGroup objectEnumerator] allObjects] count];
+        return [[[self.flavoursByGroup keyEnumerator] allObjects] count];
 }
 
 -(NSUInteger)numberOfFlavours
 {
-    NSUInteger totalNumberOfFlavours = 0;
-    NSEnumerator *flavoursByGroupEnumerator = [self.flavours objectEnumerator];
-    for(NSArray *flavoursByGroup in flavoursByGroupEnumerator) {
-        totalNumberOfFlavours += flavoursByGroup.count;
-    }
-    return totalNumberOfFlavours;
+    return [self.allFlavours count];
 }
 
 -(BOOL)flavour:(NSString*)someFlavour matches:(NSString*)anotherFlavour
@@ -35,25 +31,24 @@
     return NO;
 }
 
--(NSMutableArray *)allFlavours
+-(NSDictionary *)populateFlavoursByGroup
 {
-    NSEnumerator *flavoursByGroupEnumerator = [self.flavours objectEnumerator];
-    NSMutableArray *allFlavours = [NSMutableArray arrayWithCapacity:[self numberOfFlavours]];
-    NSUInteger flavourCounter = 0;
-    NSUInteger withinFlavourGroupCounter;
-    
-    for( NSArray *flavoursByGroup in flavoursByGroupEnumerator ) {
-        for( withinFlavourGroupCounter = 0 ; withinFlavourGroupCounter < flavoursByGroup.count ; withinFlavourGroupCounter ++ ){
-            allFlavours[flavourCounter] = flavoursByGroup[withinFlavourGroupCounter];
-            flavourCounter ++;
-        }
-    }
-    return allFlavours;
-}
-
-
--(NSDictionary *)populateFlavoursWith:(NSArray *)flavoursByGroup
-{
+    NSArray *marineFlavoursByGroup = @[@"Oily Fish", @"Caviar", @"Oyster", @"White Fish", @"Shellfish"];
+    NSArray *sulphurusFlavoursByGroup = @[@"Egg", @"Asparagus"];
+    NSArray *mustardyFlavoursByGroup = @[@"Horseradish", @"Caper", @"Watercress"];
+    NSArray *earthyFlavoursByGroup = @[@"Celery", @"Potato", @"Beetroot",@"Cumin",@"Aubergine",@"Mushroom"];
+    NSArray *cheesyFlavoursByGroup = @[@"Soft Cheese", @"Hard Cheese", @"Blue Cheese", @"Washed-rind Cheese", @"Goat's Cheese"];
+    NSArray *meatyFlavoursByGroup = @[@"Lamb", @"Beef", @"Liver", @"Black Pudding", @"Pork", @"Chicken"];
+    NSArray *roastedFlavoursByGroup = @[@"Peanut", @"Coffee", @"Chocolate"];
+    NSArray *floralFruityFlavoursByGroup = @[@"White Chocolate", @"Vanilla", @"Coriander Seed", @"Blueberry", @"Rose", @"Fig", @"Raspberry"];
+    NSArray *brambleAndHedgeFlavoursByGroup = @[@"Blackberry", @"Blackcurrant", @"Mint", @"Thyme", @"Juniper", @"Sage", @"Rosemary"];
+    NSArray *citrussyFlavoursByGroup = @[@"Cardamom", @"Ginger", @"Lemon", @"Lime", @"Grapefruit", @"Orange"];
+    NSArray *creamyFruityFlavoursByGroup = @[@"Mango", @"Coconut", @"Peach", @"Apricot", @"Melon", @"Banana"];
+    NSArray *freshFruityFlavoursByGroup = @[@"Pear", @"Apple", @"Pineapple", @"Strawberry", @"Tomato", @"Rhubarb", @"Grape", @"Watermelon", @"Cherry"];
+    NSArray *woodlandFlavoursByGroup = @[@"Almond", @"Hazelnut", @"Walnut", @"Chestnut", @"Butternut Squash", @"Carrot"];
+    NSArray *spicyFlavoursByGroup = @[@"Parsnip", @"Nutmeg", @"Clove", @"Cinnamon", @"Basil"];
+    NSArray *greenAndGrassyFlavoursByGroup = @[@"Chilli", @"Bell Pepper", @"Pea", @"Avocado", @"Coriander Leaf", @"Parsley", @"Dill", @"Cucumber", @"Anise", @"Saffron"];
+    NSArray *brineAndSaltFlavoursByGroup = @[@"Olive", @"Prosciutto", @"Bacon", @"Smoked Fish", @"Anchovy"];
     
     NSString *marineFlavourGroup = @"Marine";
     NSString *sulphurusFlavourGroup = @"Sulphurus";
@@ -72,7 +67,23 @@
     NSString *greenAndGrassyFlavourGroup = @"Green & Grassy";
     NSString *brineAndSaltFlavourGroup = @"Brine & Salt";
     
-       
+    NSArray *flavoursByGroup = @[ marineFlavoursByGroup,
+                                  sulphurusFlavoursByGroup,
+                                  mustardyFlavoursByGroup,
+                                  earthyFlavoursByGroup,
+                                  cheesyFlavoursByGroup,
+                                  meatyFlavoursByGroup,
+                                  roastedFlavoursByGroup,
+                                  floralFruityFlavoursByGroup,
+                                  brambleAndHedgeFlavoursByGroup,
+                                  citrussyFlavoursByGroup,
+                                  creamyFruityFlavoursByGroup,
+                                  freshFruityFlavoursByGroup,
+                                  woodlandFlavoursByGroup,
+                                  spicyFlavoursByGroup,
+                                  greenAndGrassyFlavoursByGroup,
+                                  brineAndSaltFlavoursByGroup ] ;
+    
     
     NSArray *flavourGroups = @[marineFlavourGroup,
                                sulphurusFlavourGroup,
@@ -94,7 +105,7 @@
     return [NSDictionary dictionaryWithObjects:flavoursByGroup forKeys:flavourGroups];
 }
 
--(NSDictionary *)populateFlavourMatchesWith:(NSArray *)flavoursByGroup
+-(NSDictionary *)populateFlavourMatches
 {
     NSArray *oilyFishFlavourMatches = @[];
     NSArray *caviarFlavourMatches = @[];
@@ -187,7 +198,7 @@
     NSArray *baconFlavourMatches = @[];
     NSArray *smokedFishFlavourMatches = @[];
     NSArray *anchovyFlavourMatches = @[];
-       
+    
     NSArray *flavourMatches = @[oilyFishFlavourMatches,
                                 caviarFlavourMatches,
                                 oysterFlavourMatches,
@@ -280,56 +291,21 @@
                                 smokedFishFlavourMatches,
                                 anchovyFlavourMatches];
     
-    return [NSDictionary dictionaryWithObjects:flavourMatches forKeys:[self allFlavours]];
+    return [NSDictionary dictionaryWithObjects:flavourMatches forKeys:self.allFlavours];
 }
 
--(void)populateFlavourWheel
+-(NSArray *)populateAllFlavours
 {
-    NSArray *marineFlavoursByGroup = @[@"Oily Fish", @"Caviar", @"Oyster", @"White Fish", @"Shellfish"];
-    NSArray *sulphurusFlavoursByGroup = @[@"Egg", @"Asparagus"];
-    NSArray *mustardyFlavoursByGroup = @[@"Horseradish", @"Caper", @"Watercress"];
-    NSArray *earthyFlavoursByGroup = @[@"Celery", @"Potato", @"Beetroot",@"Cumin",@"Aubergine",@"Mushroom"];
-    NSArray *cheesyFlavoursByGroup = @[@"Soft Cheese", @"Hard Cheese", @"Blue Cheese", @"Washed-rind Cheese", @"Goat's Cheese"];
-    NSArray *meatyFlavoursByGroup = @[@"Lamb", @"Beef", @"Liver", @"Black Pudding", @"Pork", @"Chicken"];
-    NSArray *roastedFlavoursByGroup = @[@"Peanut", @"Coffee", @"Chocolate"];
-    NSArray *floralFruityFlavoursByGroup = @[@"White Chocolate", @"Vanilla", @"Coriander Seed", @"Blueberry", @"Rose", @"Fig", @"Raspberry"];
-    NSArray *brambleAndHedgeFlavoursByGroup = @[@"Blackberry", @"Blackcurrant", @"Mint", @"Thyme", @"Juniper", @"Sage", @"Rosemary"];
-    NSArray *citrussyFlavoursByGroup = @[@"Cardamom", @"Ginger", @"Lemon", @"Lime", @"Grapefruit", @"Orange"];
-    NSArray *creamyFruityFlavoursByGroup = @[@"Mango", @"Coconut", @"Peach", @"Apricot", @"Melon", @"Banana"];
-    NSArray *freshFruityFlavoursByGroup = @[@"Pear", @"Apple", @"Pineapple", @"Strawberry", @"Tomato", @"Rhubarb", @"Grape", @"Watermelon", @"Cherry"];
-    NSArray *woodlandFlavoursByGroup = @[@"Almond", @"Hazelnut", @"Walnut", @"Chestnut", @"Butternut Squash", @"Carrot"];
-    NSArray *spicyFlavoursByGroup = @[@"Parsnip", @"Nutmeg", @"Clove", @"Cinnamon", @"Basil"];
-    NSArray *greenAndGrassyFlavoursByGroup = @[@"Chilli", @"Bell Pepper", @"Pea", @"Avocado", @"Coriander Leaf", @"Parsley", @"Dill", @"Cucumber", @"Anise", @"Saffron"];
-    NSArray *brineAndSaltFlavoursByGroup = @[@"Olive", @"Prosciutto", @"Bacon", @"Smoked Fish", @"Anchovy"];
-    
-    NSArray *flavoursByGroup = @[ marineFlavoursByGroup,
-                                  sulphurusFlavoursByGroup,
-                                  mustardyFlavoursByGroup,
-                                  earthyFlavoursByGroup,
-                                  cheesyFlavoursByGroup,
-                                  meatyFlavoursByGroup,
-                                  roastedFlavoursByGroup,
-                                  floralFruityFlavoursByGroup,
-                                  brambleAndHedgeFlavoursByGroup,
-                                  citrussyFlavoursByGroup,
-                                  creamyFruityFlavoursByGroup,
-                                  freshFruityFlavoursByGroup,
-                                  woodlandFlavoursByGroup,
-                                  spicyFlavoursByGroup,
-                                  greenAndGrassyFlavoursByGroup,
-                                  brineAndSaltFlavoursByGroup ] ;
-
-
-    _flavours = [self populateFlavoursWith:flavoursByGroup];
-    
-    _flavourMatches = [self populateFlavourMatchesWith:flavoursByGroup];
+    return @[@"Oily Fish", @"Caviar", @"Oyster", @"White Fish", @"Shellfish", @"Egg", @"Asparagus", @"Horseradish", @"Caper", @"Watercress", @"Celery", @"Potato", @"Beetroot", @"Cumin", @"Aubergine", @"Mushroom", @"Soft Cheese", @"Hard Cheese", @"Blue Cheese", @"Washed-rind Cheese", @"Goat's Cheese", @"Lamb", @"Beef", @"Liver", @"Black Pudding", @"Pork", @"Chicken", @"Peanut", @"Coffee", @"Chocolate", @"White Chocolate", @"Vanilla", @"Coriander Seed", @"Blueberry", @"Rose", @"Fig", @"Raspberry", @"Blackberry", @"Blackcurrant", @"Mint", @"Thyme", @"Juniper", @"Sage", @"Rosemary", @"Cardamom", @"Ginger", @"Lemon", @"Lime", @"Grapefruit", @"Orange", @"Mango", @"Coconut", @"Peach", @"Apricot", @"Melon", @"Banana", @"Pear", @"Apple", @"Pineapple", @"Strawberry", @"Tomato", @"Rhubarb", @"Grape", @"Watermelon", @"Cherry", @"Almond", @"Hazelnut", @"Walnut", @"Chestnut", @"Butternut Squash", @"Carrot", @"Parsnip", @"Nutmeg", @"Clove", @"Cinnamon", @"Basil", @"Chilli", @"Bell Pepper", @"Pea", @"Avocado", @"Coriander Leaf", @"Parsley", @"Dill", @"Cucumber", @"Anise", @"Saffron", @"Olive", @"Prosciutto", @"Bacon", @"Smoked Fish", @"Anchovy"];
 }
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        [self populateFlavourWheel];
+        _allFlavours = [self populateAllFlavours];
+        _flavoursByGroup = [self populateFlavoursByGroup];
+        _flavourMatches = [self populateFlavourMatches];
         _selectedFlavour = NULL;
     }
     return self;

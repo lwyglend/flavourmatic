@@ -10,7 +10,8 @@
 
 @interface LWSFlavourWheel : NSObject
 
-@property (nonatomic, readonly) NSDictionary *flavours;
+@property (nonatomic, readonly) NSArray *allFlavours;
+@property (nonatomic, readonly) NSDictionary *flavoursByGroup;
 @property (nonatomic, readonly) NSDictionary *flavourMatches;
 @property (nonatomic, readwrite) NSString *selectedFlavour;
 
@@ -18,6 +19,5 @@
 -(BOOL) flavour:(NSString*)someFlavour matches:(NSString*)anotherFlavour;
 -(NSUInteger)numberOfFlavours;
 -(NSUInteger)numberOfFlavourGroups;
--(NSMutableArray *)allFlavours;
 
 @end
